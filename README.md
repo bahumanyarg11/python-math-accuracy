@@ -50,7 +50,8 @@ python3 make_tables.py         # regenerates tables/ and paper/tables/ from resu
 
 ## Licence
 
-**[To be completed by the author.]** Note that `harness/acc.c` (error functions) and `drivers/search.py` (search algorithm) are ports of code from math_accuracy, which is distributed under the GNU General Public License; these files are therefore distributed under the GNU GPL.
+- **Code** (everything except the data listed below): GNU General Public License, version 3 or (at your option) any later version (`GPL-3.0-or-later`); see `LICENSE`. `harness/acc.c` (error functions) and `drivers/search.py` (search algorithm) are ports of code from math_accuracy, which is distributed under the GNU General Public License.
+- **Data** (`results/`, `tables/`, `paper/tables/`) and the **paper source** (`paper/main.tex`, `paper/refs.bib`): Creative Commons Attribution 4.0 International (`CC-BY-4.0`); see `LICENSE-DATA`. The worst-case inputs in `data/` are taken from the publications of Gladman et al. cited below.
 
 ## How to cite
 

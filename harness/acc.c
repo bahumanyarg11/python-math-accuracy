@@ -6,8 +6,8 @@
    (binary64/check_sample2.c) from the math_accuracy repository of Paul
    Zimmermann and co-authors, https://gitlab.inria.fr/zimmerma/math_accuracy
    (commit c2b897fb), which is distributed under the terms of the GNU General
-   Public License.  This file is therefore distributed under the GNU GPL as
-   well; see README.md.
+   Public License.  This file is distributed under the GNU General Public
+   License, version 3 or any later version (GPL-3.0-or-later); see LICENSE.
 
    Error measure: exactly that of Gladman, Innocente, Mather, Ozaki and
    Zimmermann, "Accuracy of Mathematical Functions ..." (math_accuracy repo,

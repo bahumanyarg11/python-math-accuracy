@@ -1,6 +1,7 @@
 """ATTRIBUTION: the recursive search below is a port of the algorithm of
 check_sample2.c from https://gitlab.inria.fr/zimmerma/math_accuracy (commit
 c2b897fb, GNU General Public License), by Paul Zimmermann and co-authors.
+This file is distributed under GPL-3.0-or-later; see LICENSE.
 
 Lower bounds of the maximal error (binary64 uni/bivariate, binary32
 bivariate), following Gladman et al.'s methodology:
