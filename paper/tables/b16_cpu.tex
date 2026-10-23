@@ -1,0 +1,41 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|ccc|ccc|}
+\hline
+platform & \multicolumn{3}{c|}{x86-64 CPU} & \multicolumn{3}{c|}{Arm64 CPU (M4)} \\
+library & NumPy & JAX & PyTorch & NumPy & JAX & PyTorch \\ \hline
+exp & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+exp2 & 0.501 & 13.8 & 0.501 & 0.501 & 13.8 & 0.501 \\
+expm1 & 0.501 & 2.11 & 0.501 & 0.501 & 2.11 & 0.501 \\
+log & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+log2 & 0.500 & 1.62 & 0.500 & 0.500 & 1.62 & 0.500 \\
+log10 & 0.501 & 1.50 & 0.501 & 0.501 & 1.50 & 0.501 \\
+log1p & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+sin & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+cos & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+tan & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+asin & 0.500 & 1.33 & 0.501 & 0.500 & 1.33 & 0.501 \\
+acos & 0.501 & 1.08 & 0.501 & 0.501 & 1.08 & 0.501 \\
+atan & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+sinh & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+cosh & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+tanh & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 \\
+asinh & 0.501 & 1.32 & 0.501 & 0.501 & 1.32 & 0.501 \\
+acosh & 0.501 & 1.78 & 0.501 & 0.501 & 1.78 & 0.501 \\
+atanh & 0.500 & 1.23 & 0.500 & 0.500 & 1.23 & 0.500 \\
+cbrt & 0.501 & 0.501 & -- & 0.501 & 0.501 & -- \\
+sqrt & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 \\
+rsqrt & -- & 0.500 & 0.500 & -- & 0.500 & 1.33 \\
+erf & -- & 0.501 & 4.93 & -- & 0.501 & 4.93 \\
+erfc & -- & 0.501 & 0.501 & -- & 0.501 & 0.501 \\
+lgamma & -- & 12.5 & 0.501 & -- & 12.5 & 0.501 \\
+tgamma & -- & 8.29 & -- & -- & 8.29 & -- \\
+j0 & -- & Inf (0.500)$^{\rm n}$ & -- & -- & Inf (0.500)$^{\rm n}$ & -- \\
+j1 & -- & Inf (0.500)$^{\rm n}$ & -- & -- & Inf (0.500)$^{\rm n}$ & -- \\
+\hline
+\end{tabular}
+\end{small}
+\caption{CPUs: binary16, all inputs (exhaustive). Largest error in ulps (rules of Gladman et al.); in parentheses, when different, the value excluding FTZ/DAZ-affected results and NaN mismatches. Marks: f flushed by the FTZ/DAZ mode, n spurious NaN, m missing NaN; -- not provided.}
+\label{tab:b16cpu}
+\end{table}

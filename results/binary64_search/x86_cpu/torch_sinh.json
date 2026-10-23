@@ -1,0 +1,26 @@
+{
+ "func": "sinh",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 4503599627370091.0,
+ "max_str": "4.51e15",
+ "x1": "0x1.62e42fefa39f0p+9",
+ "x2": null,
+ "y": "inf",
+ "seed_err": 36120739518526.08,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337527,
+ "seconds": 13.346598625183105,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

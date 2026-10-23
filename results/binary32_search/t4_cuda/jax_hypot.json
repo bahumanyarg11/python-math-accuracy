@@ -1,0 +1,26 @@
+{
+ "func": "hypot",
+ "lib": "jax",
+ "fmt": "binary32",
+ "device": "cuda",
+ "max_err": 2.665205673136312,
+ "max_str": "2.67",
+ "x1": "-0x1.cd07ee0000000p+33",
+ "x2": "-0x1.fe137a0000000p+37",
+ "y": "0x1.fee3a40000000p+37",
+ "seed_err": 0.7919452785122614,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337447,
+ "seconds": 7.4273645877838135,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

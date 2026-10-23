@@ -1,0 +1,13 @@
+CPU: model name	: Intel(R) Xeon(R) CPU @ 2.20GHz | 4 | 
+torch capability: AVX2 threads: 2
+acos f4 0x1.f2493e0000000p-2 distinct outputs: ['0x1.1006280000000p+0'] 
+asin f4 0x1.0ef0060000000p-1 distinct outputs: ['0x1.1d81680000000p-1'] 
+exp f4 -0x1.73cfba0000000p+0 distinct outputs: ['0x1.df41000000000p-3'] 
+log f4 0x1.559d2e0000000p+1 distinct outputs: ['0x1.f69afc0000000p-1'] 
+log2 f4 0x1.00b1100000000p+0 distinct outputs: ['0x1.fe34980000000p-9'] 
+tan f4 0x1.a4e17c0000000p+22 distinct outputs: ['-0x1.a74ff40000000p-5'] 
+acos f8 -0x1.0e41589c345eep-1 distinct outputs: ['0x1.103cc4397d634p+1'] 
+asin f8 -0x1.0e40420dc8057p-1 distinct outputs: ['-0x1.1cb25e661efe2p-1'] 
+atan f8 -0x1.606dca52331c7p-1 distinct outputs: ['-0x1.34a987cc20954p-1'] 
+erfc f8 0x1.a8cf81fa2a28fp+4 distinct outputs: ['0x0.acc0e132bfde6p-1022'] 
+tan f8 -0x1.7b2f3a40a3982p+678 distinct outputs: ['-0x1.7afd1611e786fp+3'] 

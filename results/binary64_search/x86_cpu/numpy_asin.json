@@ -1,0 +1,26 @@
+{
+ "func": "asin",
+ "lib": "numpy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 0.515402715320365,
+ "max_str": "0.516",
+ "x1": "-0x1.0000045b2c904p-3",
+ "x2": null,
+ "y": "-0x1.00abe5252746cp-3",
+ "seed_err": 0.515402715320365,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337517,
+ "seconds": 44.56142234802246,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

@@ -1,0 +1,374 @@
+[
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "erfc",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.2d6ac00000000p+3",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 124915.56180226736,
+  "err_independent": 124915.56180226736,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "j0",
+  "fmt": "binary32",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "j1",
+  "fmt": "binary32",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "tgamma",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.0000380000000p-128",
+  "x2": null,
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 55.9998130804579,
+  "err_independent": 55.9998130804579,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "j1",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.6900000000000p-140",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 361.0,
+  "err_independent": 361.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "y1",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.0000000000000p-128",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 6096508.569118257,
+  "err_independent": 6096508.569118257,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "jax",
+  "func": "acos",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "-0x1.2c00000000000p-18",
+  "x2": null,
+  "y_stored": "0x1.9200000000000p+0",
+  "outputs_seen": [
+   "0x1.9200000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000162746929034,
+  "err_independent": 0.5000162746929033,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "jax",
+  "func": "j0",
+  "fmt": "binary16",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "jax",
+  "func": "j1",
+  "fmt": "binary16",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "torch",
+  "func": "acos",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "-0x1.2c00000000000p-18",
+  "x2": null,
+  "y_stored": "0x1.9200000000000p+0",
+  "outputs_seen": [
+   "0x1.9200000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000162746929034,
+  "err_independent": 0.5000162746929033,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "erfc",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.2e00000000000p+3",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 1.3492860572266954,
+  "err_independent": 1.3492860572266954,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "j0",
+  "fmt": "bfloat16",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "j1",
+  "fmt": "bfloat16",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "tgamma",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.1c00000000000p+5",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.553685710945699,
+  "err_independent": 0.553685710945699,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "jax",
+  "func": "atan2",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.bf00000000000p-16",
+  "x2": "-0x1.c100000000000p-7",
+  "y_stored": "0x1.9200000000000p+1",
+  "outputs_seen": [
+   "0x1.9200000000000p+1"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5001057643949374,
+  "err_independent": 0.5001057643949374,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "jax",
+  "func": "hypot",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.3900000000000p-16",
+  "x2": "0x1.ff80000000000p-12",
+  "y_stored": "0x1.ff80000000000p-12",
+  "outputs_seen": [
+   "0x1.ff80000000000p-12"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 1.495802804000866,
+  "err_independent": 1.495802804000866,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "jax",
+  "func": "pow",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.d4c0000000000p+12",
+  "x2": "0x1.cb00000000000p-15",
+  "y_stored": "0x1.0000000000000p+0",
+  "outputs_seen": [
+   "0x1.0000000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.500061044696599,
+  "err_independent": 0.5000610446965988,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "torch",
+  "func": "atan2",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.bf00000000000p-16",
+  "x2": "-0x1.c100000000000p-7",
+  "y_stored": "0x1.9200000000000p+1",
+  "outputs_seen": [
+   "0x1.9200000000000p+1"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5001057643949374,
+  "err_independent": 0.5001057643949374,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "torch",
+  "func": "hypot",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.0500000000000p-16",
+  "x2": "0x1.0a00000000000p-11",
+  "y_stored": "0x1.0a00000000000p-11",
+  "outputs_seen": [
+   "0x1.0a00000000000p-11"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000660521351044,
+  "err_independent": 0.5000660521351044,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "torch",
+  "func": "pow",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.d4c0000000000p+12",
+  "x2": "0x1.cb00000000000p-15",
+  "y_stored": "0x1.0000000000000p+0",
+  "outputs_seen": [
+   "0x1.0000000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.500061044696599,
+  "err_independent": 0.5000610446965988,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "j0",
+  "fmt": "binary64",
+  "check": "nanmis",
+  "x1": "-0x1.4b4285daddeaap-502",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "j1",
+  "fmt": "binary64",
+  "check": "nanmis",
+  "x1": "-0x1.4b4285daddeaap-502",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ }
+]

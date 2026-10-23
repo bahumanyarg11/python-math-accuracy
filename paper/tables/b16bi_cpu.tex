@@ -1,0 +1,16 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|ccc|ccc|}
+\hline
+platform & \multicolumn{3}{c|}{x86-64 CPU} & \multicolumn{3}{c|}{Arm64 CPU (M4)} \\
+library & NumPy & JAX & PyTorch & NumPy & JAX & PyTorch \\ \hline
+atan2 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+hypot & 0.501 & 1.95 & 0.501 & 0.501 & 1.92 & 0.501 \\
+pow & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+\hline
+\end{tabular}
+\end{small}
+\caption{CPUs: binary16 bivariate, all pairs of inputs (exhaustive). Largest error in ulps (rules of Gladman et al.); in parentheses, when different, the value excluding FTZ/DAZ-affected results and NaN mismatches. Marks: f flushed by the FTZ/DAZ mode, n spurious NaN, m missing NaN; -- not provided.}
+\label{tab:b16bicpu}
+\end{table}

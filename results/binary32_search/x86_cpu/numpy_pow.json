@@ -1,0 +1,26 @@
+{
+ "func": "pow",
+ "lib": "numpy",
+ "fmt": "binary32",
+ "device": "cpu",
+ "max_err": 0.8167361090122842,
+ "max_str": "0.817",
+ "x1": "0x1.0257360000000p+0",
+ "x2": "0x1.309f940000000p+13",
+ "y": "0x1.fff6460000000p+127",
+ "seed_err": 0.8167361090122842,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9336910,
+ "seconds": 6.1801769733428955,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

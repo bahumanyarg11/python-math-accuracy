@@ -1,0 +1,17 @@
+{
+ "torch": {
+  "float32": {
+   "daz": true,
+   "ftz": true
+  },
+  "float64": null,
+  "binary16": {
+   "daz": false,
+   "ftz": false
+  },
+  "bfloat16": {
+   "daz": true,
+   "ftz": true
+  }
+ }
+}

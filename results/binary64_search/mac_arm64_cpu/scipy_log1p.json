@@ -1,0 +1,26 @@
+{
+ "func": "log1p",
+ "lib": "scipy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 2.155962272523142,
+ "max_str": "2.16",
+ "x1": "-0x1.92b60422097ffp-2",
+ "x2": null,
+ "y": "-0x1.ffaaec1d29af2p-2",
+ "seed_err": 1.4999999857782444,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337534,
+ "seconds": 4.130338907241821,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

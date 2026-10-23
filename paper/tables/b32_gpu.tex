@@ -1,0 +1,43 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|cc|c|}
+\hline
+platform & \multicolumn{2}{c|}{CUDA (T4)} & \multicolumn{1}{c|}{MPS (M4)} \\
+library & JAX & PyTorch & PyTorch \\ \hline
+exp & 1.94 & 1.94 & 8.39e6 (1.53)$^{\rm f}$ \\
+exp2 & 68.8 & 2.39 & 8.39e6 (1.53)$^{\rm f}$ \\
+expm1 & 1.45 & 1.45 & 8.39e6 (1.13e5)$^{\rm f}$ \\
+log & 0.865 & 0.865 & Inf (2.64)$^{\rm f}$ \\
+log2 & 1.76 & 0.919 & Inf (2.97)$^{\rm f}$ \\
+log10 & 2.09 & 2.09 & Inf (2.93)$^{\rm f}$ \\
+log1p & 0.887 & 0.887 & 3.54 \\
+sin & 1.50 & 1.50 & 3.45 \\
+cos & 1.52 & 1.52 & 3.44 \\
+tan & 3.10 & 3.10 & 4.91 \\
+asin & 1.36 & 1.36 & 2.83 \\
+acos & 1.34 & 1.34 & 2.87 \\
+atan & 1.21 & 1.21 & 8.39e6 (2.98)$^{\rm f}$ \\
+sinh & 2.94 & 2.94 & 3.21 \\
+cosh & 2.34 & 2.34 & 2.00 \\
+tanh & 5.39 & 1.82 & 2.94 \\
+asinh & 1.86 & 1.78 & 3.94 \\
+acosh & 2.30 & 2.18 & 3.45 \\
+atanh & 3.16 & 3.16 & 3.91 \\
+cbrt & 1.17 & -- & -- \\
+sqrt & 0.944 & 0.500 & Inf (0.500)$^{\rm f}$ \\
+rsqrt & 1.52 & 1.52 & Inf (1.50)$^{\rm f}$ \\
+erf & 6.25 & 1.04 & 9.47e6 (1.16)$^{\rm f}$ \\
+erfc & 1.25e5 & 4.49 & 1.68e7$^{\rm f}$ \\
+lgamma & 1.49e8 & 1.35e7 & Inf (8.93e43)$^{\rm fn}$ \\
+tgamma & 461 & -- & -- \\
+j0 & Inf (5.40e67)$^{\rm n}$ & 5.77e17 & 5.77e17 \\
+j1 & Inf (1.77e72)$^{\rm n}$ & 1.46e16 & 1.46e16$^{\rm f}$ \\
+y0 & -- & 1.46e16 & Inf (1.46e16)$^{\rm f}$ \\
+y1 & -- & 3.06e15 & Inf (3.06e15)$^{\rm f}$ \\
+\hline
+\end{tabular}
+\end{small}
+\caption{GPUs: binary32, all inputs (exhaustive). Largest error in ulps (rules of Gladman et al.); in parentheses, when different, the value excluding FTZ/DAZ-affected results and NaN mismatches. Marks: f flushed by the FTZ/DAZ mode, n spurious NaN, m missing NaN; -- not provided.}
+\label{tab:b32gpu}
+\end{table}

@@ -1,0 +1,16 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|cccc|cccc|cc|c|}
+\hline
+platform & \multicolumn{4}{c|}{x86-64 CPU} & \multicolumn{4}{c|}{Arm64 CPU (M4)} & \multicolumn{2}{c|}{CUDA (T4)} & \multicolumn{1}{c|}{MPS (M4)} \\
+library & NumPy & SciPy & JAX & PyTorch & NumPy & SciPy & JAX & PyTorch & JAX & PyTorch & PyTorch \\ \hline
+atan2 & 1.52 & -- & Inf (3.61e6)$^{\rm fn}$ & 1.52 & 0.722 & -- & 1.68e7$^{\rm f}$ & 1.00 & 3.00 & 2.13 & 1.68e7 (3.38)$^{\rm f}$ \\
+hypot & 0.501 & -- & 1.11e7 (2.00)$^{\rm f}$ & 1.00 & 0.501 & -- & 1.11e7 (2.00)$^{\rm f}$ & 1.00 & 2.67 & 1.03 & 1.55e26$^{\rm f}$ \\
+pow & 0.817 & -- & 2.29e13$^{\rm f}$ & 0.817 & 0.514 & -- & 8.29e6 (0.514)$^{\rm f}$ & 0.792 & 1.10 & 1.10 & Inf (4.01)$^{\rm f}$ \\
+\hline
+\end{tabular}
+\end{small}
+\caption{Binary32 bivariate: largest known error (lower bound). Values: largest error in ulps under the rules of Gladman et al. (3 significant digits rounded up; an input where only one of the library result and the exact result is NaN gives Inf). In parentheses, when different: the largest error excluding results affected by a flush-to-zero/denormals-are-zero mode of the backend and NaN mismatches. 0.500 = correctly rounded on all inputs; -- = function not provided for this format/backend; marks: f = some results flushed by the backend's FTZ/DAZ mode, n = spurious NaN for some inputs, m = NaN missing (number returned where the result is NaN). }
+\label{tab:b32bi}
+\end{table}

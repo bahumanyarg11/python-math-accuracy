@@ -1,0 +1,29 @@
+{
+ "func": "cosh",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 495.7087006042676,
+ "max_str": "496",
+ "x1": "0x1.16fde2aefcf82p+9",
+ "x2": null,
+ "y": "0x1.ffffff665dcbep+803",
+ "seed_err": 494.33746745875635,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": true,
+  "ftz": true
+ },
+ "flush_x1": null,
+ "flush_x2": null,
+ "flush_y": null,
+ "nevals": 9337526,
+ "seconds": 19.484871864318848,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

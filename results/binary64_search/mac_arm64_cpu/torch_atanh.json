@@ -1,0 +1,26 @@
+{
+ "func": "atanh",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 2.0002138437857546,
+ "max_str": "2.01",
+ "x1": "0x1.ffd834a270f00p-10",
+ "x2": null,
+ "y": "0x1.ffd85f432fed4p-10",
+ "seed_err": 2.0002138437857546,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337526,
+ "seconds": 8.969302892684937,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

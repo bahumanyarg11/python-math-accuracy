@@ -1,0 +1,26 @@
+{
+ "func": "hypot",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cuda",
+ "max_err": 1.8816444676666688,
+ "max_str": "1.89",
+ "x1": "-0x1.41fcfeeb2e246p+420",
+ "x2": "-0x1.8d4d41eacdeccp+420",
+ "y": "0x1.ff65325de5515p+420",
+ "seed_err": 1.8816444676666688,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 19547594,
+ "seconds": 11.982589483261108,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

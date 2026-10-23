@@ -1,0 +1,16 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|cc|c|}
+\hline
+platform & \multicolumn{2}{c|}{CUDA (T4)} & \multicolumn{1}{c|}{MPS (M4)} \\
+library & JAX & PyTorch & PyTorch \\ \hline
+atan2 & 3.00 & 2.13 & 1.68e7 (3.38)$^{\rm f}$ \\
+hypot & 2.67 & 1.03 & 1.55e26$^{\rm f}$ \\
+pow & 1.10 & 1.10 & Inf (4.01)$^{\rm f}$ \\
+\hline
+\end{tabular}
+\end{small}
+\caption{GPUs: binary32 bivariate, largest known error (lower bounds). Largest error in ulps (rules of Gladman et al.); in parentheses, when different, the value excluding FTZ/DAZ-affected results and NaN mismatches. Marks: f flushed by the FTZ/DAZ mode, n spurious NaN, m missing NaN; -- not provided.}
+\label{tab:b32bigpu}
+\end{table}

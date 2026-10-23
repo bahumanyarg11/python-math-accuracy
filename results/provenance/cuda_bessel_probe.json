@@ -1,0 +1,111 @@
+{
+ "torch": "2.9.1+cu126",
+ "cuda": "12.6",
+ "gpu": "Tesla T4",
+ "results": {
+  "bessel_j0/float32": {
+   "ok": true,
+   "dtype_out": "torch.float32",
+   "values": [
+    0.9384698271751404,
+    0.5118276476860046,
+    0.019985679537057877
+   ]
+  },
+  "bessel_j0/float64": {
+   "ok": true,
+   "dtype_out": "torch.float64",
+   "values": [
+    0.938469807240813,
+    0.5118276717359184,
+    0.019985850304223333
+   ]
+  },
+  "bessel_j0/float16": {
+   "ok": false,
+   "error": "NotImplementedError: \"bessel_j0_cuda\" not implemented for 'Half'"
+  },
+  "bessel_j0/bfloat16": {
+   "ok": false,
+   "error": "NotImplementedError: \"bessel_j0_cuda\" not implemented for 'BFloat16'"
+  },
+  "bessel_j1/float32": {
+   "ok": true,
+   "dtype_out": "torch.float32",
+   "values": [
+    0.24226844310760498,
+    0.5579364895820618,
+    -0.07714534550905228
+   ]
+  },
+  "bessel_j1/float64": {
+   "ok": true,
+   "dtype_out": "torch.float64",
+   "values": [
+    0.24226845767487387,
+    0.5579365079100997,
+    -0.0771453520141123
+   ]
+  },
+  "bessel_j1/float16": {
+   "ok": false,
+   "error": "NotImplementedError: \"bessel_j1_cuda\" not implemented for 'Half'"
+  },
+  "bessel_j1/bfloat16": {
+   "ok": false,
+   "error": "NotImplementedError: \"bessel_j1_cuda\" not implemented for 'BFloat16'"
+  },
+  "bessel_y0/float32": {
+   "ok": true,
+   "dtype_out": "torch.float32",
+   "values": [
+    -0.4445187449455261,
+    0.3824489116668701,
+    -0.0772443562746048
+   ]
+  },
+  "bessel_y0/float64": {
+   "ok": true,
+   "dtype_out": "torch.float64",
+   "values": [
+    -0.4445187335067066,
+    0.3824489237977592,
+    -0.0772443133650831
+   ]
+  },
+  "bessel_y0/float16": {
+   "ok": false,
+   "error": "NotImplementedError: \"bessel_y0_cuda\" not implemented for 'Half'"
+  },
+  "bessel_y0/bfloat16": {
+   "ok": false,
+   "error": "NotImplementedError: \"bessel_y0_cuda\" not implemented for 'BFloat16'"
+  },
+  "bessel_y1/float32": {
+   "ok": true,
+   "dtype_out": "torch.float32",
+   "values": [
+    -1.4714723825454712,
+    -0.41230863332748413,
+    -0.020372388884425163
+   ]
+  },
+  "bessel_y1/float64": {
+   "ok": true,
+   "dtype_out": "torch.float64",
+   "values": [
+    -1.4714723926702433,
+    -0.41230862697391135,
+    -0.020372312002759328
+   ]
+  },
+  "bessel_y1/float16": {
+   "ok": false,
+   "error": "NotImplementedError: \"bessel_y1_cuda\" not implemented for 'Half'"
+  },
+  "bessel_y1/bfloat16": {
+   "ok": false,
+   "error": "NotImplementedError: \"bessel_y1_cuda\" not implemented for 'BFloat16'"
+  }
+ }
+}

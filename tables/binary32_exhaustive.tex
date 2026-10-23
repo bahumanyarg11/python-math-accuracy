@@ -1,0 +1,44 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|cccc|cccc|cc|c|}
+\hline
+platform & \multicolumn{4}{c|}{x86-64 CPU} & \multicolumn{4}{c|}{Arm64 CPU (M4)} & \multicolumn{2}{c|}{CUDA (T4)} & \multicolumn{1}{c|}{MPS (M4)} \\
+library & NumPy & SciPy & JAX & PyTorch & NumPy & SciPy & JAX & PyTorch & JAX & PyTorch & PyTorch \\ \hline
+exp & 2.55 & -- & 8.39e6 (1.02)$^{\rm f}$ & 0.750 & 0.514 & -- & 8.39e6 (1.02)$^{\rm f}$ & 0.988 & 1.94 & 1.94 & 8.39e6 (1.53)$^{\rm f}$ \\
+exp2 & 0.502 & 0.501 & 8.39e6$^{\rm f}$ & 0.885 & 0.514 & 0.501 & 8.39e6$^{\rm f}$ & 0.885 & 68.8 & 2.39 & 8.39e6 (1.53)$^{\rm f}$ \\
+exp10 & -- & 0.500 & -- & -- & -- & 0.500 & -- & -- & -- & -- & -- \\
+expm1 & 0.813 & 0.500 & 6.17 & 1.00 & 0.687 & 0.500 & 6.17 & 1.00 & 1.45 & 1.45 & 8.39e6 (1.13e5)$^{\rm f}$ \\
+log & 3.84 & -- & Inf (1.20)$^{\rm f}$ & 0.932 & 0.563 & -- & Inf (1.20)$^{\rm f}$ & 0.629 & 0.865 & 0.865 & Inf (2.64)$^{\rm f}$ \\
+log2 & 0.752 & -- & Inf (2.33)$^{\rm f}$ & 0.681 & 0.502 & -- & Inf (2.33)$^{\rm f}$ & 0.674 & 1.76 & 0.919 & Inf (2.97)$^{\rm f}$ \\
+log10 & 2.07 & -- & Inf (2.77)$^{\rm f}$ & 0.628 & 0.502 & -- & Inf (2.77)$^{\rm f}$ & 0.712 & 2.09 & 2.09 & Inf (2.93)$^{\rm f}$ \\
+log1p & 1.30 & 0.501 & 8.39e6 (2.53)$^{\rm f}$ & 1.01 & 0.563 & 0.501 & 8.39e6 (2.53)$^{\rm f}$ & 1.01 & 0.887 & 0.887 & 3.54 \\
+sin & 1.49 & -- & 0.561 & 0.602 & 1.49 & -- & 8.39e6 (0.846)$^{\rm f}$ & 0.904 & 1.50 & 1.50 & 3.45 \\
+cos & 1.49 & -- & 0.561 & 0.606 & 1.49 & -- & 0.846 & 0.937 & 1.52 & 1.52 & 3.44 \\
+tan & 1.48 & -- & 1.48 & 0.503 & 0.746 & -- & 8.39e6 (0.746)$^{\rm f}$ & 0.938 & 3.10 & 3.10 & 4.91 \\
+asin & 0.898 & -- & 1.68e7$^{\rm f}$ & 0.755 & 0.634 & -- & 8.39e6$^{\rm f}$ & 0.777 & 1.36 & 1.36 & 2.83 \\
+acos & 0.899 & -- & 2.29 & 0.796 & 0.634 & -- & 1.60 & 0.695 & 1.34 & 1.34 & 2.87 \\
+atan & 0.853 & -- & 0.853 & 0.829 & 0.722 & -- & 8.39e6 (0.722)$^{\rm f}$ & 0.939 & 1.21 & 1.21 & 8.39e6 (2.98)$^{\rm f}$ \\
+sinh & 1.89 & -- & 8.39e6 (25.0)$^{\rm f}$ & 8.39e6 & 0.579 & -- & 8.39e6 (25.0)$^{\rm f}$ & 8.39e6 & 2.94 & 2.94 & 3.21 \\
+cosh & 1.89 & -- & 25.0 & 8.39e6 & 0.579 & -- & 25.0 & 8.39e6 & 2.34 & 2.34 & 2.00 \\
+tanh & 1.38 & -- & 4.90 & 0.514 & 1.38 & -- & 4.90 & 1.01 & 5.39 & 1.82 & 2.94 \\
+asinh & 1.78 & -- & 8.39e6 (3.07)$^{\rm f}$ & 1.78 & 0.515 & -- & 8.39e6 (3.07)$^{\rm f}$ & 0.515 & 1.86 & 1.78 & 3.94 \\
+acosh & 2.01 & -- & 4.18 & 2.01 & 0.502 & -- & 4.18 & 0.502 & 2.30 & 2.18 & 3.45 \\
+atanh & 1.73 & -- & 8.39e6 (2.92)$^{\rm f}$ & 1.01 & 0.511 & -- & 8.39e6 (2.92)$^{\rm f}$ & 1.01 & 3.16 & 3.16 & 3.91 \\
+cbrt & 0.969 & 0.500 & 1.11e7 & -- & 0.500 & 0.500 & 8.39e6 & -- & 1.17 & -- & -- \\
+sqrt & 0.500 & -- & Inf (0.500)$^{\rm f}$ & 0.750 & 0.500 & -- & Inf (0.500)$^{\rm f}$ & 0.500 & 0.944 & 0.500 & Inf (0.500)$^{\rm f}$ \\
+rsqrt & -- & -- & Inf (1.00)$^{\rm f}$ & 1.50 & -- & -- & Inf (1.50)$^{\rm f}$ & 1.50 & 1.52 & 1.52 & Inf (1.50)$^{\rm f}$ \\
+erf & -- & 0.500 & 9.47e6 (6.71)$^{\rm f}$ & 0.780 & -- & 0.500 & 9.47e6 (6.71)$^{\rm f}$ & 9.47e6 & 6.25 & 1.04 & 9.47e6 (1.16)$^{\rm f}$ \\
+erfc & -- & 0.501 & 8.39e6 (65.8)$^{\rm f}$ & 0.934 & -- & 0.501 & 8.39e6 (65.8)$^{\rm f}$ & 1.45 & 1.25e5 & 4.49 & 1.68e7$^{\rm f}$ \\
+lgamma & -- & 0.501 & 4.47e43 (3.41e38)$^{\rm f}$ & 2.00e5 & -- & 0.501 & 4.47e43 (3.41e38)$^{\rm f}$ & 2.00e5 & 1.49e8 & 1.35e7 & Inf (8.93e43)$^{\rm fn}$ \\
+tgamma & -- & 0.501 & 2.52e7 (8.39e6)$^{\rm f}$ & -- & -- & 0.501 & 2.52e7 (8.39e6)$^{\rm f}$ & -- & 461 & -- & -- \\
+j0 & -- & 1.96e15 & Inf (6.59e63)$^{\rm n}$ & 5.77e17 & -- & 1.96e15 & Inf (6.59e63)$^{\rm n}$ & 5.77e17 & Inf (5.40e67)$^{\rm n}$ & 5.77e17 & 5.77e17 \\
+j1 & -- & 1.46e16 & Inf (1.77e72)$^{\rm n}$ & 1.46e16 & -- & 1.46e16 & Inf (1.77e72)$^{\rm n}$ & 1.46e16 & Inf (1.77e72)$^{\rm n}$ & 1.46e16 & 1.46e16$^{\rm f}$ \\
+y0 & -- & 1.46e16 & -- & 1.46e16 & -- & 1.46e16 & -- & 1.46e16 & -- & 1.46e16 & Inf (1.46e16)$^{\rm f}$ \\
+y1 & -- & 1.96e15 & -- & 3.06e15 & -- & 1.96e15 & -- & 3.06e15 & -- & 3.06e15 & Inf (3.06e15)$^{\rm f}$ \\
+\hline
+\end{tabular}
+\end{small}
+\caption{Binary32: largest error over all inputs (exhaustive). Values: largest error in ulps under the rules of Gladman et al. (3 significant digits rounded up; an input where only one of the library result and the exact result is NaN gives Inf). In parentheses, when different: the largest error excluding results affected by a flush-to-zero/denormals-are-zero mode of the backend and NaN mismatches. 0.500 = correctly rounded on all inputs; -- = function not provided for this format/backend; marks: f = some results flushed by the backend's FTZ/DAZ mode, n = spurious NaN for some inputs, m = NaN missing (number returned where the result is NaN). }
+\label{tab:b32}
+\end{table}

@@ -1,0 +1,38 @@
+{
+ "jax": {
+  "float32": {
+   "daz": false,
+   "ftz": false
+  },
+  "float64": {
+   "daz": false,
+   "ftz": false
+  },
+  "binary16": {
+   "daz": false,
+   "ftz": false
+  },
+  "bfloat16": {
+   "daz": false,
+   "ftz": false
+  }
+ },
+ "torch": {
+  "float32": {
+   "daz": false,
+   "ftz": false
+  },
+  "float64": {
+   "daz": false,
+   "ftz": false
+  },
+  "binary16": {
+   "daz": false,
+   "ftz": false
+  },
+  "bfloat16": {
+   "daz": false,
+   "ftz": false
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "func": "tgamma",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 4316.010984965738,
+ "max_str": "4.32e3",
+ "x1": "-0x1.54ab9d7310449p+7",
+ "x2": null,
+ "y": "-0x1.ffc32b5a2376bp-1021",
+ "seed_err": 1721.050426891721,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 21853,
+ "flush_example": [
+  "-0x0.fa8ae991f3033p-1022",
+  null
+ ],
+ "flush_max": 1.3510387509801272e+16,
+ "denormal_mode": {
+  "daz": true,
+  "ftz": true
+ },
+ "flush_x1": "-0x0.fffa03a8a00fdp-1022",
+ "flush_x2": null,
+ "flush_y": "-inf",
+ "nevals": 9337527,
+ "seconds": 26.269979000091553,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

@@ -1,0 +1,26 @@
+{
+ "func": "sin",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cuda",
+ "max_err": 1.5114908076293445,
+ "max_str": "1.52",
+ "x1": "-0x1.1c49ad613ff3bp+19",
+ "x2": null,
+ "y": "-0x1.fffe203cfabe0p-2",
+ "seed_err": 1.5114908076293445,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337534,
+ "seconds": 22.498408794403076,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

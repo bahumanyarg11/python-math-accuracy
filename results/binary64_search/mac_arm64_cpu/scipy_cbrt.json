@@ -1,0 +1,26 @@
+{
+ "func": "cbrt",
+ "lib": "scipy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 0.7351068582190028,
+ "max_str": "0.736",
+ "x1": "-0x1.6a6d72cd2c3c9p+820",
+ "x2": null,
+ "y": "-0x1.6a2b122a3a9c2p+273",
+ "seed_err": 0.5029193802213248,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337521,
+ "seconds": 1.5909981727600098,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

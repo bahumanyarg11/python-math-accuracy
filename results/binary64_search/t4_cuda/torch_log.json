@@ -1,0 +1,26 @@
+{
+ "func": "log",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cuda",
+ "max_err": 0.5633531258468146,
+ "max_str": "0.564",
+ "x1": "0x1.69e7aa6da2df5p-1",
+ "x2": null,
+ "y": "-0x1.634508c9adf00p-2",
+ "seed_err": 0.5633531258468146,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337521,
+ "seconds": 21.50062918663025,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

@@ -1,0 +1,26 @@
+{
+ "func": "lgamma",
+ "lib": "scipy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": Infinity,
+ "max_str": "Inf",
+ "x1": "0x0.00000002f6806p-1022",
+ "x2": null,
+ "y": "inf",
+ "seed_err": Infinity,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337523,
+ "seconds": 126.87529873847961,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

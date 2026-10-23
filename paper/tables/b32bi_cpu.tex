@@ -1,0 +1,16 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|cccc|cccc|}
+\hline
+platform & \multicolumn{4}{c|}{x86-64 CPU} & \multicolumn{4}{c|}{Arm64 CPU (M4)} \\
+library & NumPy & SciPy & JAX & PyTorch & NumPy & SciPy & JAX & PyTorch \\ \hline
+atan2 & 1.52 & -- & Inf (3.61e6)$^{\rm fn}$ & 1.52 & 0.722 & -- & 1.68e7$^{\rm f}$ & 1.00 \\
+hypot & 0.501 & -- & 1.11e7 (2.00)$^{\rm f}$ & 1.00 & 0.501 & -- & 1.11e7 (2.00)$^{\rm f}$ & 1.00 \\
+pow & 0.817 & -- & 2.29e13$^{\rm f}$ & 0.817 & 0.514 & -- & 8.29e6 (0.514)$^{\rm f}$ & 0.792 \\
+\hline
+\end{tabular}
+\end{small}
+\caption{CPUs: binary32 bivariate, largest known error (lower bounds). Largest error in ulps (rules of Gladman et al.); in parentheses, when different, the value excluding FTZ/DAZ-affected results and NaN mismatches. Marks: f flushed by the FTZ/DAZ mode, n spurious NaN, m missing NaN; -- not provided.}
+\label{tab:b32bicpu}
+\end{table}

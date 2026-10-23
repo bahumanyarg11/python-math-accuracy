@@ -1,0 +1,26 @@
+{
+ "func": "cos",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cuda",
+ "max_err": 1.511976247809637,
+ "max_str": "1.52",
+ "x1": "0x1.25133ca3904dfp+20",
+ "x2": null,
+ "y": "-0x1.fb399cd6fe562p-3",
+ "seed_err": 1.511976247809637,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337526,
+ "seconds": 19.059226751327515,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

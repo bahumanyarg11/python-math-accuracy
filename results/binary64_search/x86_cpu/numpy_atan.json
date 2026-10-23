@@ -1,0 +1,26 @@
+{
+ "func": "atan",
+ "lib": "numpy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 0.5221682678493194,
+ "max_str": "0.523",
+ "x1": "0x1.f9004c4fef9eap-4",
+ "x2": null,
+ "y": "0x1.f67727f5618f2p-4",
+ "seed_err": 0.5221682678493194,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337524,
+ "seconds": 41.38605809211731,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

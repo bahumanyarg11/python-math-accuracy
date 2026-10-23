@@ -1,0 +1,41 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|cc|cc|}
+\hline
+platform & \multicolumn{2}{c|}{x86-64 CPU} & \multicolumn{2}{c|}{Arm64 CPU (M4)} \\
+library & JAX & PyTorch & JAX & PyTorch \\ \hline
+exp & 109 (0.500)$^{\rm f}$ & 0.500 & 109 (0.500)$^{\rm f}$ & 0.500 \\
+exp2 & 101$^{\rm f}$ & 0.500 & 101$^{\rm f}$ & 0.500 \\
+expm1 & 0.500 & 0.500 & 0.500 & 0.500 \\
+log & Inf (0.500)$^{\rm f}$ & 0.500 & Inf (0.500)$^{\rm f}$ & 0.500 \\
+log2 & Inf (1.58)$^{\rm f}$ & 0.500 & Inf (1.58)$^{\rm f}$ & 0.500 \\
+log10 & Inf (1.76)$^{\rm f}$ & 0.500 & Inf (1.76)$^{\rm f}$ & 0.500 \\
+log1p & 127 (0.500)$^{\rm f}$ & 0.500 & 127 (0.500)$^{\rm f}$ & 0.500 \\
+sin & 0.500 & 0.500 & 127 (0.500)$^{\rm f}$ & 0.500 \\
+cos & 0.500 & 0.500 & 0.500 & 0.500 \\
+tan & 0.500 & 0.500 & 128 (0.500)$^{\rm f}$ & 0.500 \\
+asin & 256$^{\rm f}$ & 0.500 & 129$^{\rm f}$ & 0.500 \\
+acos & 1.14 & 0.500 & 1.14 & 0.500 \\
+atan & 0.500 & 0.500 & 127 (0.500)$^{\rm f}$ & 0.500 \\
+sinh & 128 (0.500)$^{\rm f}$ & 87.2 & 128 (0.500)$^{\rm f}$ & 87.2 \\
+cosh & 0.500 & 87.2 & 0.500 & 87.2 \\
+tanh & 0.500 & 0.500 & 0.500 & 0.500 \\
+asinh & 127 (1.12)$^{\rm f}$ & 0.500 & 127 (1.12)$^{\rm f}$ & 0.500 \\
+acosh & 1.60 & 0.500 & 1.60 & 0.500 \\
+atanh & 128 (1.09)$^{\rm f}$ & 0.500 & 128 (1.09)$^{\rm f}$ & 0.500 \\
+cbrt & 130 & -- & 128 & -- \\
+sqrt & Inf (0.500)$^{\rm f}$ & 0.500 & Inf (0.500)$^{\rm f}$ & 0.500 \\
+rsqrt & Inf (0.500)$^{\rm f}$ & 0.500 & Inf (0.500)$^{\rm f}$ & 1.15 \\
+erf & 144 (0.500)$^{\rm f}$ & 144 & 144 (0.500)$^{\rm f}$ & 144 \\
+erfc & 45.8 (0.500)$^{\rm f}$ & 0.500 & 45.8 (0.500)$^{\rm f}$ & 0.500 \\
+lgamma & 6.81e38 (5.20e33)$^{\rm f}$ & 2.23 & 6.81e38 (5.20e33)$^{\rm f}$ & 2.23 \\
+tgamma & 383 (69.7)$^{\rm f}$ & -- & 383 (69.7)$^{\rm f}$ & -- \\
+j0 & Inf (1.54e54)$^{\rm n}$ & -- & Inf (1.54e54)$^{\rm n}$ & -- \\
+j1 & Inf (2.06e62)$^{\rm n}$ & -- & Inf (2.06e62)$^{\rm n}$ & -- \\
+\hline
+\end{tabular}
+\end{small}
+\caption{CPUs: bfloat16, all inputs (exhaustive). Largest error in ulps (rules of Gladman et al.); in parentheses, when different, the value excluding FTZ/DAZ-affected results and NaN mismatches. Marks: f flushed by the FTZ/DAZ mode, n spurious NaN, m missing NaN; -- not provided.}
+\label{tab:bf16cpu}
+\end{table}

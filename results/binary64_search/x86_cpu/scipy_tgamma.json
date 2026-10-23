@@ -1,0 +1,26 @@
+{
+ "func": "tgamma",
+ "lib": "scipy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 9007199254343031.0,
+ "max_str": "9.01e15",
+ "x1": "-0x1.58000dca7a802p+7",
+ "x2": null,
+ "y": "-0x0.0p+0",
+ "seed_err": 9007176734048380.0,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337527,
+ "seconds": 282.6790614128113,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

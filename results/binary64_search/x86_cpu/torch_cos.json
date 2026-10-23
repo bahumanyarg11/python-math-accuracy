@@ -1,0 +1,26 @@
+{
+ "func": "cos",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 0.5027057815995755,
+ "max_str": "0.503",
+ "x1": "-0x1.92ed9190a2e09p+0",
+ "x2": null,
+ "y": "-0x1.9bb86c60a6f60p-9",
+ "seed_err": 0.5000000000000001,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337525,
+ "seconds": 20.581016540527344,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

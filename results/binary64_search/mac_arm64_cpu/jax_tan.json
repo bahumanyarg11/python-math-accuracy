@@ -1,0 +1,29 @@
+{
+ "func": "tan",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 3.5253520465580874,
+ "max_str": "3.53",
+ "x1": "-0x1.a81d98fc58537p+6",
+ "x2": null,
+ "y": "0x1.ffd8333232701p-1",
+ "seed_err": 3.5253520465580874,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": true,
+  "ftz": true
+ },
+ "flush_x1": null,
+ "flush_x2": null,
+ "flush_y": null,
+ "nevals": 9337533,
+ "seconds": 4.00089693069458,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

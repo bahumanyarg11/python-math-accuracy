@@ -1,0 +1,26 @@
+{
+ "func": "erfc",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cuda",
+ "max_err": 4.5034761166585495,
+ "max_str": "4.51",
+ "x1": "0x1.8659a03b35abcp-7",
+ "x2": null,
+ "y": "0x1.f91e3b4d575c6p-1",
+ "seed_err": 4.5034761166585495,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337522,
+ "seconds": 26.270262241363525,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

@@ -1,0 +1,26 @@
+{
+ "func": "acosh",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 2.2418221140380843,
+ "max_str": "2.25",
+ "x1": "0x1.00007fb3703ddp+0",
+ "x2": null,
+ "y": "0x1.ff66b44ce67f0p-9",
+ "seed_err": 2.2418221140380843,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337525,
+ "seconds": 7.388402938842773,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

@@ -1,0 +1,29 @@
+{
+ "func": "sin",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 0.9435976594351164,
+ "max_str": "0.944",
+ "x1": "-0x1.07e4c92b5349dp+4",
+ "x2": null,
+ "y": "0x1.6a096375ffb24p-1",
+ "seed_err": 0.9435976594351164,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": true,
+  "ftz": true
+ },
+ "flush_x1": null,
+ "flush_x2": null,
+ "flush_y": null,
+ "nevals": 9337527,
+ "seconds": 3.598410129547119,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

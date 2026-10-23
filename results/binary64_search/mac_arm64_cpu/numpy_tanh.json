@@ -1,0 +1,26 @@
+{
+ "func": "tanh",
+ "lib": "numpy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 1.1955491436907155,
+ "max_str": "1.20",
+ "x1": "0x1.008933c3c4e17p-1",
+ "x2": null,
+ "y": "0x1.da0cf0bcccfcfp-2",
+ "seed_err": 0.7850126045159698,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337524,
+ "seconds": 3.1344943046569824,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

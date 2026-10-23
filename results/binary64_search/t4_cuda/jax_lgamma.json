@@ -1,0 +1,26 @@
+{
+ "func": "lgamma",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cuda",
+ "max_err": Infinity,
+ "max_str": "Inf",
+ "x1": "0x1.0000000000000p+1",
+ "x2": null,
+ "y": "0x1.0000000000000p-50",
+ "seed_err": 2.2073161255642125e+17,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337519,
+ "seconds": 390.68528294563293,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

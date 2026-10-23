@@ -1,0 +1,35 @@
+{
+ "func": "j0",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": Infinity,
+ "max_str": "Inf",
+ "x1": "-0x1.8f65dfd52fab3p+974",
+ "x2": null,
+ "y": "-inf",
+ "seed_err": 1.0145682788526979e+145,
+ "nanmis": 750779,
+ "nan_example": [
+  "-0x1.4b4285daddeaap-502",
+  null
+ ],
+ "n_flush": 694,
+ "flush_example": [
+  "-0x0.fa8ae991f3033p-1022",
+  null
+ ],
+ "flush_max": Infinity,
+ "denormal_mode": {
+  "daz": true,
+  "ftz": true
+ },
+ "flush_x1": "-0x0.fa8ae991f3033p-1022",
+ "flush_x2": null,
+ "flush_y": "nan",
+ "nevals": 9337524,
+ "seconds": 134.00672674179077,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

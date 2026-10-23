@@ -1,0 +1,922 @@
+{
+ "tag": "x86_cpu",
+ "device": "cpu",
+ "versions": {
+  "python": "3.13.15",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "numpy": "2.2.6",
+  "scipy": "1.17.1",
+  "jax": "0.11.2",
+  "jaxlib": "0.11.2",
+  "torch": "2.9.1+cpu",
+  "ml_dtypes": "0.5.4",
+  "torch_cuda": null,
+  "torch_config": "PyTorch built with:\n  - GCC 13.3\n  - C++ Version: 201703\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.7.1 (Git Hash 8d263e693366ef8db40acc569cc7d8edf644556d)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=5811a8d7da873dd699ff6687092c225caffcf1bb, CXX_COMPILER=/opt/rh/gcc-toolset-13/root/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -faligned-new -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-dangling-reference -Wno-error=dangling-reference -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.9.1, USE_CUDA=0, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n",
+  "torch_parallel": "ATen/Parallel:\n\tat::get_num_threads() : 4\n\tat::get_num_interop_threads() : 2\nOpenMP 201511 (a.k.a. OpenMP 4.5)\n\tomp_get_max_threads() : 4\nIntel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n\tmkl_get_max_threads() : 4\nIntel(R) MKL-DNN v3.7.1 (Git Hash 8d263e693366ef8db40acc569cc7d8edf644556d)\nstd::thread::hardware_concurrency() : 4\nEnvironment variables:\n\tOMP_NUM_THREADS : [not set]\n\tMKL_NUM_THREADS : [not set]\nATen parallel backend: OpenMP\n",
+  "numpy_config": "Build Dependencies:\n  blas:\n    detection method: pkgconfig\n    found: true\n    include directory: /opt/_internal/cpython-3.13.0/lib/python3.13/site-packages/scipy_openblas64/include\n    lib directory: /opt/_internal/cpython-3.13.0/lib/python3.13/site-packages/scipy_openblas64/lib\n    name: scipy-openblas\n    openblas configuration: OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY\n      Haswell MAX_THREADS=64\n    pc file directory: /project/.openblas\n    version: 0.3.29\n  lapack:\n    detection method: pkgconfig\n    found: true\n    include directory: /opt/_internal/cpython-3.13.0/lib/python3.13/site-packages/scipy_openblas64/include\n    lib directory: /opt/_internal/cpython-3.13.0/lib/python3.13/site-packages/scipy_openblas64/lib\n    name: scipy-openblas\n    openblas configuration: OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY\n      Haswell MAX_THREADS=64\n    pc file directory: /project/.openblas\n    version: 0.3.29\nCompilers:\n  c:\n    commands: cc\n    linker: ld.bfd\n    name: gcc\n    version: 10.2.1\n  c++:\n    commands: c++\n    linker: ld.bfd\n    name: gcc\n    version: 10.2.1\n  cython:\n    commands: cython\n    linker: cython\n    name: cython\n    version: 3.1.0\nMachine Information:\n  build:\n    cpu: x86_64\n    endian: little\n    family: x86_64\n    system: linux\n  host:\n    cpu: x86_64\n    endian: little\n    family: x86_64\n    system: linux\nPython Information:\n  path: /tmp/build-env-m3m9aqh7/bin/python\n  version: '3.13'\nSIMD Extensions:\n  baseline:\n  - SSE\n  - SSE2\n  - SSE3\n  found:\n  - SSSE3\n  - SSE41\n  - POPCNT\n  - SSE42\n  - AVX\n  - F16C\n  - FMA3\n  - AVX2\n  not found:\n  - AVX512F\n  - AVX512CD\n  - AVX512_KNL\n  - AVX512_KNM\n  - AVX512_SKX\n  - AVX512_CLX\n  - AVX512_CNL\n  - AVX512_ICL\n\n",
+  "numpy_simd": {
+   "MMX": "True",
+   "SSE": "True",
+   "SSE2": "True",
+   "SSE3": "True",
+   "SSSE3": "True",
+   "SSE41": "True",
+   "POPCNT": "True",
+   "SSE42": "True",
+   "AVX": "True",
+   "F16C": "True",
+   "FMA3": "True",
+   "AVX2": "True"
+  },
+  "jax_devices": [
+   "cpu:0"
+  ],
+  "env": {
+   "MKL_THREADING_LAYER": "GNU",
+   "TF_CPP_MIN_LOG_LEVEL": "2",
+   "TF_FORCE_GPU_ALLOW_GROWTH": "true"
+  },
+  "cpu": [
+   "model name\t: Intel(R) Xeon(R) CPU @ 2.20GHz\n",
+   "flags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities\n"
+  ]
+ },
+ "results": {
+  "numpy/exp": {
+   "f32_eq_libm32": 0.947296142578125,
+   "f32_eq_libm64_rounded": 0.947296142578125,
+   "f32_eq_own_f64_rounded": 0.7769098281860352,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/exp2": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.999969482421875,
+   "f32_eq_own_f64_rounded": 0.9996647834777832,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/expm1": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.9928741455078125,
+   "f32_eq_own_f64_rounded": 0.962655782699585,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/log": {
+   "f32_eq_libm32": 0.9821319580078125,
+   "f32_eq_libm64_rounded": 0.98211669921875,
+   "f32_eq_own_f64_rounded": 0.9616687297821045,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 0.9999842489919355,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/log2": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.99993896484375,
+   "f32_eq_own_f64_rounded": 0.9993898868560791,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/log10": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.9935150146484375,
+   "f32_eq_own_f64_rounded": 0.9569792747497559,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/log1p": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.9973602294921875,
+   "f32_eq_own_f64_rounded": 0.9805774688720703,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/sin": {
+   "f32_eq_libm32": 0.9847564697265625,
+   "f32_eq_libm64_rounded": 0.97943115234375,
+   "f32_eq_own_f64_rounded": 0.9191422462463379,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/cos": {
+   "f32_eq_libm32": 0.988525390625,
+   "f32_eq_libm64_rounded": 0.9832916259765625,
+   "f32_eq_own_f64_rounded": 0.9054787158966064,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/tan": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.980621337890625,
+   "f32_eq_own_f64_rounded": 0.9714763164520264,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/asin": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.998931884765625,
+   "f32_eq_own_f64_rounded": 0.9957640171051025,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/acos": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.998809814453125,
+   "f32_eq_own_f64_rounded": 0.9954469203948975,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/atan": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.9950408935546875,
+   "f32_eq_own_f64_rounded": 0.9667646884918213,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/sinh": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.9835968017578125,
+   "f32_eq_own_f64_rounded": 0.8658492565155029,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/cosh": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.99188232421875,
+   "f32_eq_own_f64_rounded": 0.8846638202667236,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/tanh": {
+   "f32_eq_libm32": 0.965606689453125,
+   "f32_eq_libm64_rounded": 0.9847412109375,
+   "f32_eq_own_f64_rounded": 0.8018755912780762,
+   "f64_eq_libm64": 0.8706512451171875,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/asinh": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.855743408203125,
+   "f32_eq_own_f64_rounded": 0.8621649742126465,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 0.9999369959677419
+  },
+  "numpy/acosh": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.943115234375,
+   "f32_eq_own_f64_rounded": 0.9438169002532959,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/atanh": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.98779296875,
+   "f32_eq_own_f64_rounded": 0.9845802783966064,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/cbrt": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.895416259765625,
+   "f32_eq_own_f64_rounded": 0.8908989429473877,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/pow": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.9999847412109375,
+   "f32_eq_own_f64_rounded": 0.9998316764831543,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "numpy/atan2": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.7762298583984375,
+   "f32_eq_own_f64_rounded": 0.8073275089263916,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 0.9999369959677419
+  },
+  "numpy/hypot": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 1.0,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0
+  },
+  "scipy/exp2": {
+   "f32_eq_libm32": 0.9999847412109375,
+   "f32_eq_libm64_rounded": 1.0,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f32_eq_numpy": 0.9996383190155029,
+   "f64_eq_libm64": 0.9371795654296875
+  },
+  "scipy/exp10": {
+   "f32_eq_libm32": 0.9999847412109375,
+   "f32_eq_libm64_rounded": 1.0,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f64_eq_libm64": 0.9321746826171875
+  },
+  "scipy/expm1": {
+   "f32_eq_libm32": 0.993255615234375,
+   "f32_eq_libm64_rounded": 1.0,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f32_eq_numpy": 0.9627187252044678,
+   "f64_eq_libm64": 0.94268798828125
+  },
+  "scipy/log1p": {
+   "f32_eq_libm32": 0.9974517822265625,
+   "f32_eq_libm64_rounded": 1.0,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f32_eq_numpy": 0.980445384979248,
+   "f64_eq_libm64": 0.982086181640625
+  },
+  "scipy/cbrt": {
+   "f32_eq_libm32": 0.897064208984375,
+   "f32_eq_libm64_rounded": 1.0,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f32_eq_numpy": 0.8910753726959229,
+   "f64_eq_libm64": 0.4869232177734375
+  },
+  "scipy/erf": {
+   "f32_eq_libm32": 0.9702911376953125,
+   "f32_eq_libm64_rounded": 1.0,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f64_eq_libm64": 0.8766937255859375
+  },
+  "scipy/erfc": {
+   "f32_eq_libm32": 0.9954071044921875,
+   "f32_eq_libm64_rounded": 1.0,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f64_eq_libm64": 0.774749755859375
+  },
+  "scipy/lgamma": {
+   "f32_eq_libm32": 0.8829803466796875,
+   "f32_eq_libm64_rounded": 1.0,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f64_eq_libm64": 0.7525482177734375
+  },
+  "scipy/tgamma": {
+   "f32_eq_libm32": 0.9520416259765625,
+   "f32_eq_libm64_rounded": 1.0,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f64_eq_libm64": 0.6710357666015625
+  },
+  "scipy/j0": {
+   "f32_eq_libm32": 0.547576904296875,
+   "f32_eq_libm64_rounded": 0.6160888671875,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f64_eq_libm64": 0.3780364990234375
+  },
+  "scipy/j1": {
+   "f32_eq_libm32": 0.548919677734375,
+   "f32_eq_libm64_rounded": 0.622772216796875,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f64_eq_libm64": 0.2404937744140625
+  },
+  "scipy/y0": {
+   "f32_eq_libm32": 0.6229248046875,
+   "f32_eq_libm64_rounded": 0.8073272705078125,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f64_eq_libm64": 0.676483154296875
+  },
+  "scipy/y1": {
+   "f32_eq_libm32": 0.6530609130859375,
+   "f32_eq_libm64_rounded": 0.813201904296875,
+   "f32_eq_own_f64_rounded": 1.0,
+   "f64_eq_libm64": 0.663726806640625
+  },
+  "jax/exp": {
+   "f32_eq_libm32": 0.995391845703125,
+   "f32_eq_libm64_rounded": 0.99542236328125,
+   "f32_eq_own_f64_rounded": 0.9505617618560791,
+   "f32_eq_numpy": 0.7761309146881104,
+   "f64_eq_libm64": 0.9308929443359375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.9998314950980393
+  },
+  "jax/exp2": {
+   "f32_eq_libm32": 0.9770965576171875,
+   "f32_eq_libm64_rounded": 0.9770355224609375,
+   "f32_eq_own_f64_rounded": 0.6853346824645996,
+   "f32_eq_numpy": 0.6853377819061279,
+   "f64_eq_libm64": 0.680938720703125,
+   "binary16_eq_own_f32_rounded": 0.8900737147177419,
+   "binary16_eq_own_f64_rounded": 0.8900737147177419,
+   "bfloat16_eq_own_f32_rounded": 0.9751378676470588,
+   "bfloat16_eq_own_f64_rounded": 0.975
+  },
+  "jax/expm1": {
+   "f32_eq_libm32": 0.9482421875,
+   "f32_eq_libm64_rounded": 0.94317626953125,
+   "f32_eq_own_f64_rounded": 0.907956600189209,
+   "f32_eq_numpy": 0.9297926425933838,
+   "f64_eq_libm64": 0.93939208984375,
+   "binary16_eq_own_f32_rounded": 0.8207377772177419,
+   "binary16_eq_own_f64_rounded": 0.8207377772177419,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "jax/log": {
+   "f32_eq_libm32": 0.992584228515625,
+   "f32_eq_libm64_rounded": 0.9925689697265625,
+   "f32_eq_own_f64_rounded": 0.9762985706329346,
+   "f32_eq_numpy": 0.9614753723144531,
+   "f64_eq_libm64": 0.9998626708984375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.996109068627451
+  },
+  "jax/log2": {
+   "f32_eq_libm32": 0.8421173095703125,
+   "f32_eq_libm64_rounded": 0.8421630859375,
+   "f32_eq_own_f64_rounded": 0.8446469306945801,
+   "f32_eq_numpy": 0.8446214199066162,
+   "f64_eq_libm64": 0.8575286865234375,
+   "binary16_eq_own_f32_rounded": 0.8127047631048387,
+   "binary16_eq_own_f64_rounded": 0.8127047631048387,
+   "bfloat16_eq_own_f32_rounded": 0.8115808823529411,
+   "bfloat16_eq_own_f64_rounded": 0.8076899509803922
+  },
+  "jax/log10": {
+   "f32_eq_libm32": 0.8300018310546875,
+   "f32_eq_libm64_rounded": 0.8278656005859375,
+   "f32_eq_own_f64_rounded": 0.8179552555084229,
+   "f32_eq_numpy": 0.826035737991333,
+   "f64_eq_libm64": 0.854400634765625,
+   "binary16_eq_own_f32_rounded": 0.8614383820564516,
+   "binary16_eq_own_f64_rounded": 0.8614226310483871,
+   "bfloat16_eq_own_f32_rounded": 0.8238051470588236,
+   "bfloat16_eq_own_f64_rounded": 0.8199142156862745
+  },
+  "jax/log1p": {
+   "f32_eq_libm32": 0.9926300048828125,
+   "f32_eq_libm64_rounded": 0.99151611328125,
+   "f32_eq_own_f64_rounded": 0.9575929641723633,
+   "f32_eq_numpy": 0.9658617973327637,
+   "f64_eq_libm64": 0.982269287109375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.996109068627451
+  },
+  "jax/sin": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.993255615234375,
+   "f32_eq_own_f64_rounded": 0.9897491931915283,
+   "f32_eq_numpy": 0.9213206768035889,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "jax/cos": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.99365234375,
+   "f32_eq_own_f64_rounded": 0.9906253814697266,
+   "f32_eq_numpy": 0.9082803726196289,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "jax/tan": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.9807891845703125,
+   "f32_eq_own_f64_rounded": 0.9713208675384521,
+   "f32_eq_numpy": 1.0,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "jax/asin": {
+   "f32_eq_libm32": 0.9762115478515625,
+   "f32_eq_libm64_rounded": 0.976226806640625,
+   "f32_eq_own_f64_rounded": 0.9716529846191406,
+   "f32_eq_numpy": 0.9714436531066895,
+   "f64_eq_libm64": 0.9859619140625,
+   "binary16_eq_own_f32_rounded": 0.9324911794354839,
+   "binary16_eq_own_f64_rounded": 0.9324596774193549,
+   "bfloat16_eq_own_f32_rounded": 0.9951286764705882,
+   "bfloat16_eq_own_f64_rounded": 0.9873161764705882
+  },
+  "jax/acos": {
+   "f32_eq_libm32": 0.7862701416015625,
+   "f32_eq_libm64_rounded": 0.786102294921875,
+   "f32_eq_own_f64_rounded": 0.8830966949462891,
+   "f32_eq_numpy": 0.8835804462432861,
+   "f64_eq_libm64": 0.9964752197265625,
+   "binary16_eq_own_f32_rounded": 0.9919039818548387,
+   "binary16_eq_own_f64_rounded": 0.9918882308467742,
+   "bfloat16_eq_own_f32_rounded": 0.9991115196078432,
+   "bfloat16_eq_own_f64_rounded": 0.9991115196078432
+  },
+  "jax/atan": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.9952850341796875,
+   "f32_eq_own_f64_rounded": 0.966698408126831,
+   "f32_eq_numpy": 1.0,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "jax/sinh": {
+   "f32_eq_libm32": 0.92950439453125,
+   "f32_eq_libm64_rounded": 0.9264984130859375,
+   "f32_eq_own_f64_rounded": 0.7587380409240723,
+   "f32_eq_numpy": 0.8354194164276123,
+   "f64_eq_libm64": 0.7224273681640625,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 0.9999527469758065,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.996109068627451
+  },
+  "jax/cosh": {
+   "f32_eq_libm32": 0.9776458740234375,
+   "f32_eq_libm64_rounded": 0.9712371826171875,
+   "f32_eq_own_f64_rounded": 0.804405927658081,
+   "f32_eq_numpy": 0.877037763595581,
+   "f64_eq_libm64": 0.7434844970703125,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 0.999968497983871,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "jax/tanh": {
+   "f32_eq_libm32": 0.9472198486328125,
+   "f32_eq_libm64_rounded": 0.9574127197265625,
+   "f32_eq_own_f64_rounded": 0.6830565929412842,
+   "f32_eq_numpy": 0.6305890083312988,
+   "f64_eq_libm64": 0.6733551025390625,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "jax/asinh": {
+   "f32_eq_libm32": 0.9244537353515625,
+   "f32_eq_libm64_rounded": 0.9045257568359375,
+   "f32_eq_own_f64_rounded": 0.8626551628112793,
+   "f32_eq_numpy": 0.8979947566986084,
+   "f64_eq_libm64": 0.936767578125,
+   "binary16_eq_own_f32_rounded": 0.8346459173387096,
+   "binary16_eq_own_f64_rounded": 0.8346144153225806,
+   "bfloat16_eq_own_f32_rounded": 0.9121323529411764,
+   "bfloat16_eq_own_f64_rounded": 0.9082414215686274
+  },
+  "jax/acosh": {
+   "f32_eq_libm32": 0.94049072265625,
+   "f32_eq_libm64_rounded": 0.99249267578125,
+   "f32_eq_own_f64_rounded": 0.9417002201080322,
+   "f32_eq_numpy": 0.9189672470092773,
+   "f64_eq_libm64": 0.9281463623046875,
+   "binary16_eq_own_f32_rounded": 0.9667338709677419,
+   "binary16_eq_own_f64_rounded": 0.9667338709677419,
+   "bfloat16_eq_own_f32_rounded": 0.9925857843137255,
+   "bfloat16_eq_own_f64_rounded": 0.9925857843137255
+  },
+  "jax/atanh": {
+   "f32_eq_libm32": 0.9788055419921875,
+   "f32_eq_libm64_rounded": 0.98211669921875,
+   "f32_eq_own_f64_rounded": 0.9772300720214844,
+   "f32_eq_numpy": 0.9746913909912109,
+   "f64_eq_libm64": 0.9844207763671875,
+   "binary16_eq_own_f32_rounded": 0.9460055443548387,
+   "binary16_eq_own_f64_rounded": 0.9460055443548387,
+   "bfloat16_eq_own_f32_rounded": 0.9954350490196079,
+   "bfloat16_eq_own_f64_rounded": 0.9915441176470589
+  },
+  "jax/cbrt": {
+   "f32_eq_libm32": 0.9963531494140625,
+   "f32_eq_libm64_rounded": 0.8896331787109375,
+   "f32_eq_own_f64_rounded": 0.889223575592041,
+   "f32_eq_numpy": 0.9981153011322021,
+   "f64_eq_libm64": 0.9997406005859375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.996109068627451
+  },
+  "jax/erf": {
+   "f32_eq_libm32": 0.6743011474609375,
+   "f32_eq_libm64_rounded": 0.6698455810546875,
+   "f32_eq_own_f64_rounded": 0.7126142978668213,
+   "f64_eq_libm64": 0.9997406005859375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 0.9999369959677419,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.996109068627451
+  },
+  "jax/erfc": {
+   "f32_eq_libm32": 0.985198974609375,
+   "f32_eq_libm64_rounded": 0.9859466552734375,
+   "f32_eq_own_f64_rounded": 0.7633352279663086,
+   "f64_eq_libm64": 0.77569580078125,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.999938725490196
+  },
+  "jax/lgamma": {
+   "f32_eq_libm32": 0.758880615234375,
+   "f32_eq_libm64_rounded": 0.766998291015625,
+   "f32_eq_own_f64_rounded": 0.4175727367401123,
+   "f64_eq_libm64": 0.4431304931640625,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 0.9990706905241935,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.9960631127450981
+  },
+  "jax/tgamma": {
+   "f32_eq_libm32": 0.4960479736328125,
+   "f32_eq_libm64_rounded": 0.4959564208984375,
+   "f32_eq_own_f64_rounded": 0.2618556022644043,
+   "f64_eq_libm64": 0.271636962890625,
+   "binary16_eq_own_f32_rounded": 0.6284809727822581,
+   "binary16_eq_own_f64_rounded": 0.628449470766129,
+   "bfloat16_eq_own_f32_rounded": 0.5244485294117647,
+   "bfloat16_eq_own_f64_rounded": 0.5214613970588236
+  },
+  "jax/j0": {
+   "f32_eq_libm32": 0.00225830078125,
+   "f32_eq_libm64_rounded": 0.002471923828125,
+   "f32_eq_own_f64_rounded": 0.2925586700439453,
+   "f64_eq_libm64": 0.11907958984375,
+   "binary16_eq_own_f32_rounded": 0.5394405241935484,
+   "binary16_eq_own_f64_rounded": 0.009230090725806451,
+   "bfloat16_eq_own_f32_rounded": 0.7073223039215686,
+   "bfloat16_eq_own_f64_rounded": 0.4452205882352941
+  },
+  "jax/j1": {
+   "f32_eq_libm32": 0.00140380859375,
+   "f32_eq_libm64_rounded": 0.001922607421875,
+   "f32_eq_own_f64_rounded": 0.2885406017303467,
+   "f64_eq_libm64": 0.126068115234375,
+   "binary16_eq_own_f32_rounded": 0.5394405241935484,
+   "binary16_eq_own_f64_rounded": 0.009230090725806451,
+   "bfloat16_eq_own_f32_rounded": 0.7089154411764705,
+   "bfloat16_eq_own_f64_rounded": 0.44699754901960786
+  },
+  "jax/pow": {
+   "f32_eq_libm32": 0.999420166015625,
+   "f32_eq_libm64_rounded": 0.9993896484375,
+   "f32_eq_own_f64_rounded": 0.9995899200439453,
+   "f32_eq_numpy": 0.9997560977935791,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.9997855392156862
+  },
+  "jax/atan2": {
+   "f32_eq_libm32": 0.9773406982421875,
+   "f32_eq_libm64_rounded": 0.7519683837890625,
+   "f32_eq_own_f64_rounded": 0.7959954738616943,
+   "f32_eq_numpy": 0.9884259700775146,
+   "f64_eq_libm64": 0.997100830078125,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 0.9998739919354839,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.9906403186274509
+  },
+  "jax/hypot": {
+   "f32_eq_libm32": 0.959716796875,
+   "f32_eq_libm64_rounded": 0.959716796875,
+   "f32_eq_own_f64_rounded": 0.8133814334869385,
+   "f32_eq_numpy": 0.8133814334869385,
+   "f64_eq_libm64": 0.8295135498046875,
+   "binary16_eq_own_f32_rounded": 0.8632654989919355,
+   "binary16_eq_own_f64_rounded": 0.863249747983871,
+   "bfloat16_eq_own_f32_rounded": 0.9870251225490196,
+   "bfloat16_eq_own_f64_rounded": 0.9869485294117647
+  },
+  "torch/exp": {
+   "f32_eq_libm32": 0.9979400634765625,
+   "f32_eq_libm64_rounded": 0.997955322265625,
+   "f32_eq_own_f64_rounded": 0.9785335063934326,
+   "f32_eq_numpy": 0.7758514881134033,
+   "f64_eq_libm64": 0.997528076171875,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/exp2": {
+   "f32_eq_libm32": 0.99725341796875,
+   "f32_eq_libm64_rounded": 0.9972686767578125,
+   "f32_eq_own_f64_rounded": 0.9677648544311523,
+   "f32_eq_numpy": 0.9676792621612549,
+   "f64_eq_libm64": 0.9657440185546875,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/expm1": {
+   "f32_eq_libm32": 0.992034912109375,
+   "f32_eq_libm64_rounded": 0.9981842041015625,
+   "f32_eq_own_f64_rounded": 0.9987571239471436,
+   "f32_eq_numpy": 0.9618737697601318,
+   "f64_eq_libm64": 0.9669952392578125,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/log": {
+   "f32_eq_libm32": 0.99737548828125,
+   "f32_eq_libm64_rounded": 0.997406005859375,
+   "f32_eq_own_f64_rounded": 0.9832274913787842,
+   "f32_eq_numpy": 0.965735912322998,
+   "f64_eq_libm64": 0.9998931884765625,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/log2": {
+   "f32_eq_libm32": 0.999908447265625,
+   "f32_eq_libm64_rounded": 0.999969482421875,
+   "f32_eq_own_f64_rounded": 0.999896764755249,
+   "f32_eq_numpy": 0.9993784427642822,
+   "f64_eq_libm64": 0.9998321533203125,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/log10": {
+   "f32_eq_libm32": 0.9922332763671875,
+   "f32_eq_libm64_rounded": 0.99993896484375,
+   "f32_eq_own_f64_rounded": 0.9998667240142822,
+   "f32_eq_numpy": 0.9569060802459717,
+   "f64_eq_libm64": 0.964263916015625,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/log1p": {
+   "f32_eq_libm32": 0.9933319091796875,
+   "f32_eq_libm64_rounded": 0.99554443359375,
+   "f32_eq_own_f64_rounded": 0.9965715408325195,
+   "f32_eq_numpy": 0.978456974029541,
+   "f64_eq_libm64": 0.98016357421875,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/sin": {
+   "f32_eq_libm32": 0.988616943359375,
+   "f32_eq_libm64_rounded": 0.99267578125,
+   "f32_eq_own_f64_rounded": 0.9716198444366455,
+   "f32_eq_numpy": 0.9104540348052979,
+   "f64_eq_libm64": 0.9988861083984375,
+   "binary16_eq_own_f32_rounded": 0.999968497983871,
+   "binary16_eq_own_f64_rounded": 0.999968497983871,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/cos": {
+   "f32_eq_libm32": 0.983062744140625,
+   "f32_eq_libm64_rounded": 0.98681640625,
+   "f32_eq_own_f64_rounded": 0.9678668975830078,
+   "f32_eq_numpy": 0.8925859928131104,
+   "f64_eq_libm64": 0.999114990234375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/tan": {
+   "f32_eq_libm32": 0.9807281494140625,
+   "f32_eq_libm64_rounded": 0.9999542236328125,
+   "f32_eq_own_f64_rounded": 0.9999454021453857,
+   "f32_eq_numpy": 0.9714157581329346,
+   "f64_eq_libm64": 0.9974365234375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/asin": {
+   "f32_eq_libm32": 0.9987640380859375,
+   "f32_eq_libm64_rounded": 0.99884033203125,
+   "f32_eq_own_f64_rounded": 0.9966416358947754,
+   "f32_eq_numpy": 0.9954190254211426,
+   "f64_eq_libm64": 0.9953765869140625,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 0.999968497983871,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/acos": {
+   "f32_eq_libm32": 0.9996490478515625,
+   "f32_eq_libm64_rounded": 0.9986724853515625,
+   "f32_eq_own_f64_rounded": 0.9949815273284912,
+   "f32_eq_numpy": 0.9982807636260986,
+   "f64_eq_libm64": 0.9956817626953125,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/atan": {
+   "f32_eq_libm32": 0.9947052001953125,
+   "f32_eq_libm64_rounded": 0.9976043701171875,
+   "f32_eq_own_f64_rounded": 0.9674286842346191,
+   "f32_eq_numpy": 0.9770598411560059,
+   "f64_eq_libm64": 0.9697113037109375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/sinh": {
+   "f32_eq_libm32": 0.9831695556640625,
+   "f32_eq_libm64_rounded": 0.9993743896484375,
+   "f32_eq_own_f64_rounded": 0.9989919662475586,
+   "f32_eq_numpy": 0.8650186061859131,
+   "f64_eq_libm64": 0.8682708740234375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.9999693627450981
+  },
+  "torch/cosh": {
+   "f32_eq_libm32": 0.9919586181640625,
+   "f32_eq_libm64_rounded": 0.999908447265625,
+   "f32_eq_own_f64_rounded": 0.9994442462921143,
+   "f32_eq_numpy": 0.8843367099761963,
+   "f64_eq_libm64": 0.88470458984375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.9999693627450981
+  },
+  "torch/tanh": {
+   "f32_eq_libm32": 0.973114013671875,
+   "f32_eq_libm64_rounded": 0.99993896484375,
+   "f32_eq_own_f64_rounded": 0.9994103908538818,
+   "f32_eq_numpy": 0.8017663955688477,
+   "f64_eq_libm64": 0.9670562744140625,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/asinh": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.8541717529296875,
+   "f32_eq_own_f64_rounded": 0.862138032913208,
+   "f32_eq_numpy": 1.0,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 0.9999369959677419,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/acosh": {
+   "f32_eq_libm32": 1.0,
+   "f32_eq_libm64_rounded": 0.9444427490234375,
+   "f32_eq_own_f64_rounded": 0.9435865879058838,
+   "f32_eq_numpy": 1.0,
+   "f64_eq_libm64": 1.0,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/atanh": {
+   "f32_eq_libm32": 0.9849395751953125,
+   "f32_eq_libm64_rounded": 0.99786376953125,
+   "f32_eq_own_f64_rounded": 0.998974084854126,
+   "f32_eq_numpy": 0.9836158752441406,
+   "f64_eq_libm64": 0.9891204833984375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/erf": {
+   "f32_eq_libm32": 0.9972686767578125,
+   "f32_eq_libm64_rounded": 0.9714508056640625,
+   "f32_eq_own_f64_rounded": 0.9829134941101074,
+   "f64_eq_libm64": 0.99285888671875,
+   "binary16_eq_own_f32_rounded": 0.8962953629032258,
+   "binary16_eq_own_f64_rounded": 0.8962953629032258,
+   "bfloat16_eq_own_f32_rounded": 0.5605085784313726,
+   "bfloat16_eq_own_f64_rounded": 0.5605085784313726
+  },
+  "torch/erfc": {
+   "f32_eq_libm32": 0.9847869873046875,
+   "f32_eq_libm64_rounded": 0.9874267578125,
+   "f32_eq_own_f64_rounded": 0.9757781028747559,
+   "f64_eq_libm64": 0.90362548828125,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/lgamma": {
+   "f32_eq_libm32": 0.882568359375,
+   "f32_eq_libm64_rounded": 0.9990692138671875,
+   "f32_eq_own_f64_rounded": 0.9872972965240479,
+   "f64_eq_libm64": 0.79779052734375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 0.9999842489919355,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 0.9999693627450981
+  },
+  "torch/j0": {
+   "f32_eq_libm32": 0.463531494140625,
+   "f32_eq_libm64_rounded": 0.463592529296875,
+   "f32_eq_own_f64_rounded": 0.42006921768188477,
+   "f64_eq_libm64": 0.2734375
+  },
+  "torch/j1": {
+   "f32_eq_libm32": 0.1093597412109375,
+   "f32_eq_libm64_rounded": 0.1095428466796875,
+   "f32_eq_own_f64_rounded": 0.3006148338317871,
+   "f64_eq_libm64": 0.1204376220703125
+  },
+  "torch/y0": {
+   "f32_eq_libm32": 0.7319183349609375,
+   "f32_eq_libm64_rounded": 0.5963134765625,
+   "f32_eq_own_f64_rounded": 0.631699800491333,
+   "f64_eq_libm64": 0.633514404296875
+  },
+  "torch/y1": {
+   "f32_eq_libm32": 0.695770263671875,
+   "f32_eq_libm64_rounded": 0.6285552978515625,
+   "f32_eq_own_f64_rounded": 0.6724555492401123,
+   "f64_eq_libm64": 0.6206817626953125
+  },
+  "torch/pow": {
+   "f32_eq_libm32": 0.9996185302734375,
+   "f32_eq_libm64_rounded": 0.9996490478515625,
+   "f32_eq_own_f64_rounded": 0.9953291416168213,
+   "f32_eq_numpy": 0.9952812194824219,
+   "f64_eq_libm64": 0.99566650390625,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/atan2": {
+   "f32_eq_libm32": 0.7777862548828125,
+   "f32_eq_libm64_rounded": 0.998382568359375,
+   "f32_eq_own_f64_rounded": 0.9842772483825684,
+   "f32_eq_numpy": 0.8045446872711182,
+   "f64_eq_libm64": 0.9865875244140625,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  },
+  "torch/hypot": {
+   "f32_eq_libm32": 0.9999237060546875,
+   "f32_eq_libm64_rounded": 0.9999237060546875,
+   "f32_eq_own_f64_rounded": 0.9999666213989258,
+   "f32_eq_numpy": 0.9999666213989258,
+   "f64_eq_libm64": 0.996917724609375,
+   "binary16_eq_own_f32_rounded": 1.0,
+   "binary16_eq_own_f64_rounded": 1.0,
+   "bfloat16_eq_own_f32_rounded": 1.0,
+   "bfloat16_eq_own_f64_rounded": 1.0
+  }
+ }
+}

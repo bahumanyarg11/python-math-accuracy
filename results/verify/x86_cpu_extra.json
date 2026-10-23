@@ -1,0 +1,1593 @@
+[
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "asin",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fffffc0000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388607.000000001,
+  "err_independent": 8388607.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "asinh",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fffffc0000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388607.0,
+  "err_independent": 8388607.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "atanh",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fffffc0000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388607.000000001,
+  "err_independent": 8388607.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "erf",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fffffc0000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 9465529.379751587,
+  "err_independent": 9465529.379751587,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "erfc",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.2639c00000000p+3",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388590.713210993,
+  "err_independent": 8388590.713210993,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "exp",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.5d58a00000000p+6",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388581.986888149,
+  "err_independent": 8388581.986888148,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "exp2",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.f800020000000p+6",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388563.6386977425,
+  "err_independent": 8388563.6386977425,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "j0",
+  "fmt": "binary32",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "j1",
+  "fmt": "binary32",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "lgamma",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 4.460149039706125e+43,
+  "err_independent": 4.460149039706125e+43,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "log",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf",
+   "nan"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "log10",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "log1p",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fffffc0000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388607.0,
+  "err_independent": 8388607.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "log2",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "rsqrt",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "sinh",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fffffc0000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388607.000000001,
+  "err_independent": 8388607.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "sqrt",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "jax",
+  "func": "tgamma",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fffffc0000000p-127",
+  "x2": null,
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 25165822.99999988,
+  "err_independent": 25165822.99999988,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "erfc",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.4140020000000p+3",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.6786735951569847,
+  "err_independent": 0.6786735951569846,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "j1",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.6900000000000p-140",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 361.0,
+  "err_independent": 361.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "log1p",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 1.0000000000000002,
+  "err_independent": 1.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "y1",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.0000000000000p-128",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 6096508.569118257,
+  "err_independent": 6096508.569118257,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "jax",
+  "func": "acos",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "-0x1.3000000000000p-18",
+  "x2": null,
+  "y_stored": "0x1.9200000000000p+0",
+  "outputs_seen": [
+   "0x1.9200000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.500077309849154,
+  "err_independent": 0.500077309849154,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "jax",
+  "func": "asin",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.0000000000000p-24",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 1.0000000000000007,
+  "err_independent": 1.0000000000000007,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "jax",
+  "func": "j0",
+  "fmt": "binary16",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "jax",
+  "func": "j1",
+  "fmt": "binary16",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "numpy",
+  "func": "acos",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "-0x1.2c00000000000p-18",
+  "x2": null,
+  "y_stored": "0x1.9200000000000p+0",
+  "outputs_seen": [
+   "0x1.9200000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000162746929034,
+  "err_independent": 0.5000162746929033,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "torch",
+  "func": "acos",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "-0x1.2c00000000000p-18",
+  "x2": null,
+  "y_stored": "0x1.9200000000000p+0",
+  "outputs_seen": [
+   "0x1.9200000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000162746929034,
+  "err_independent": 0.5000162746929033,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "torch",
+  "func": "erf",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.8000000000000p-23",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 3.385137501286502,
+  "err_independent": 3.3851375012865015,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "asin",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.00000000000001,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "asinh",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.0,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "atanh",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.00000000000001,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "erf",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 143.30415422113012,
+  "err_independent": 143.3041542211301,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "erfc",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.2800000000000p+3",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 45.75613342024792,
+  "err_independent": 45.75613342024792,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "exp",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.5e00000000000p+6",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 108.69817606686516,
+  "err_independent": 108.69817606686516,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "exp2",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.fa00000000000p+6",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 90.50966799187809,
+  "err_independent": 90.50966799187809,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "j0",
+  "fmt": "bfloat16",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "j1",
+  "fmt": "bfloat16",
+  "check": "spnan",
+  "x1": "0x0.0p+0",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "lgamma",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 6.80564733841877e+38,
+  "err_independent": 6.80564733841877e+38,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "log",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "log10",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "log1p",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.0,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "log2",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "rsqrt",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "sinh",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.00000000000001,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "sqrt",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "jax",
+  "func": "tgamma",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 382.99212598425197,
+  "err_independent": 382.99212598425197,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "erf",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 143.30415422113012,
+  "err_independent": 143.3041542211301,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "jax",
+  "func": "atan2",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.ebc0000000000p+1",
+  "x2": "-0x1.2500000000000p-16",
+  "y_stored": "0x1.9200000000000p+0",
+  "outputs_seen": [
+   "0x1.9200000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000935693416709,
+  "err_independent": 0.5000935693416708,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "jax",
+  "func": "hypot",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.3900000000000p-16",
+  "x2": "0x1.ff80000000000p-12",
+  "y_stored": "0x1.ff80000000000p-12",
+  "outputs_seen": [
+   "0x1.ff80000000000p-12"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 1.495802804000866,
+  "err_independent": 1.495802804000866,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "jax",
+  "func": "pow",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.cd40000000000p-7",
+  "x2": "0x1.e080000000000p-15",
+  "y_stored": "0x1.0000000000000p+0",
+  "outputs_seen": [
+   "0x1.0000000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000610200882774,
+  "err_independent": 0.5000610200882774,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "numpy",
+  "func": "atan2",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.ebc0000000000p+1",
+  "x2": "-0x1.2500000000000p-16",
+  "y_stored": "0x1.9200000000000p+0",
+  "outputs_seen": [
+   "0x1.9200000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000935693416709,
+  "err_independent": 0.5000935693416708,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "numpy",
+  "func": "hypot",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.3680000000000p-15",
+  "x2": "0x1.7880000000000p-10",
+  "y_stored": "0x1.7880000000000p-10",
+  "outputs_seen": [
+   "0x1.7880000000000p-10"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000531550770576,
+  "err_independent": 0.5000531550770576,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "numpy",
+  "func": "pow",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.cd40000000000p-7",
+  "x2": "0x1.e080000000000p-15",
+  "y_stored": "0x1.0000000000000p+0",
+  "outputs_seen": [
+   "0x1.0000000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000610200882774,
+  "err_independent": 0.5000610200882774,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "torch",
+  "func": "atan2",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.e000000000000p-1",
+  "x2": "-0x1.1c00000000000p-18",
+  "y_stored": "0x1.9200000000000p+0",
+  "outputs_seen": [
+   "0x1.9200000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.50006103380744,
+  "err_independent": 0.50006103380744,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "torch",
+  "func": "hypot",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.3680000000000p-15",
+  "x2": "0x1.7880000000000p-10",
+  "y_stored": "0x1.7880000000000p-10",
+  "outputs_seen": [
+   "0x1.7880000000000p-10"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000531550770576,
+  "err_independent": 0.5000531550770576,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "torch",
+  "func": "pow",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.cd40000000000p-7",
+  "x2": "0x1.e080000000000p-15",
+  "y_stored": "0x1.0000000000000p+0",
+  "outputs_seen": [
+   "0x1.0000000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000610200882774,
+  "err_independent": 0.5000610200882774,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16_bivar",
+  "lib": "jax",
+  "func": "atan2",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.0000000000000p-133",
+  "x2": "0x1.0000000000000p-106",
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 256.0,
+  "err_independent": 256.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16_bivar",
+  "lib": "jax",
+  "func": "atan2",
+  "fmt": "bfloat16",
+  "check": "spnan",
+  "x1": "0x1.0000000000000p-133",
+  "x2": "0x1.0000000000000p-133",
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16_bivar",
+  "lib": "jax",
+  "func": "hypot",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": "0x1.fc00000000000p-127",
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 179.60512242138307,
+  "err_independent": 179.60512242138307,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16_bivar",
+  "lib": "jax",
+  "func": "pow",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": "-0x1.b600000000000p-1",
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 268435233.33323994,
+  "err_independent": 268435233.33323994,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "asin",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "0x0.ffffeb0915b98p-1022",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 4503593999752088.0,
+  "err_independent": 4503593999752088.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "asinh",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.ffe257acbcb34p-1022",
+  "x2": null,
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 4501561578081076.0,
+  "err_independent": 4501561578081076.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "atan2",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "0x0.07a98237a0802p-1022",
+  "x2": "0x1.ea6fced2fe0f4p-320",
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 9006104948965227.0,
+  "err_independent": 9006104948965226.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "atanh",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.ffe257acbcb34p-1022",
+  "x2": null,
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 4501561578081076.0,
+  "err_independent": 4501561578081076.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "cbrt",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "0x0.7f9baddc7b2dep-1022",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8997997862669921.0,
+  "err_independent": 8997997862669921.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "erf",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.ffe257acbcb34p-1022",
+  "x2": null,
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 5079468304104286.0,
+  "err_independent": 5079468304104286.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "erfc",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "0x1.a8b13f1ac946bp+4",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 4500103715224853.0,
+  "err_independent": 4500103715224853.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "exp",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x1.62336e1a68fc8p+9",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 4479439578634720.5,
+  "err_independent": 4479439578634720.5,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "exp2",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x1.ff003788e9408p+9",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 4498312186566263.0,
+  "err_independent": 4498312186566263.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "hypot",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.e706d8fe062c5p-1022",
+  "x2": "-0x0.a7e6101619f85p-1022",
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 5024204099630630.0,
+  "err_independent": 5024204099630630.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "j0",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.fa8ae991f3033p-1022",
+  "x2": null,
+  "y_stored": "nan",
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "err_reported": Infinity,
+  "err_independent": Infinity,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "j0",
+  "fmt": "binary64",
+  "check": "nanmis",
+  "x1": "-0x1.4b4285daddeaap-502",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "j1",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.fa8ae991f3033p-1022",
+  "x2": null,
+  "y_stored": "nan",
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "err_reported": Infinity,
+  "err_independent": Infinity,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "j1",
+  "fmt": "binary64",
+  "check": "nanmis",
+  "x1": "-0x1.4b4285daddeaap-502",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "lgamma",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "0x0.00000002f6806p-1022",
+  "x2": null,
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": Infinity,
+  "err_independent": Infinity,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "log",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.fa8ae991f3033p-1022",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": Infinity,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "log10",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.fa8ae991f3033p-1022",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": Infinity,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "log1p",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.ffe257acbcb34p-1022",
+  "x2": null,
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 4501561578081076.0,
+  "err_independent": 4501561578081076.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "log2",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.fa8ae991f3033p-1022",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": Infinity,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "pow",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "0x0.f882a5b53c94fp-1022",
+  "x2": "-0x1.e7b839b467a52p-1",
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 1.014120480182583e+31,
+  "err_independent": 1.0141204801825828e+31,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "rsqrt",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.fa8ae991f3033p-1022",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": Infinity,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "sinh",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.ffe257acbcb34p-1022",
+  "x2": null,
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 4501561578081076.0,
+  "err_independent": 4501561578081076.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "sqrt",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.fa8ae991f3033p-1022",
+  "x2": null,
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": true,
+  "err_reported": Infinity,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "tanh",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.ffe257acbcb34p-1022",
+  "x2": null,
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 4501561578081076.0,
+  "err_independent": 4501561578081076.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary64_search",
+  "lib": "jax",
+  "func": "tgamma",
+  "fmt": "binary64",
+  "check": "flushmax",
+  "x1": "-0x0.fffa03a8a00fdp-1022",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 1.3510387509801272e+16,
+  "err_independent": 1.3510387509801272e+16,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32_search",
+  "lib": "jax",
+  "func": "atan2",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.a53c500000000p-127",
+  "x2": "0x1.a53de00000000p-45",
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 16776972.909156455,
+  "err_independent": 16776972.909156453,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32_search",
+  "lib": "jax",
+  "func": "atan2",
+  "fmt": "binary32",
+  "check": "nanmis",
+  "x1": "0x1.e667a00000000p-128",
+  "x2": "-0x1.2a8a600000000p-128",
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary32_search",
+  "lib": "jax",
+  "func": "hypot",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.eb50e80000000p-127",
+  "x2": "0x1.d15cc00000000p-127",
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 11087423.665184803,
+  "err_independent": 11087423.665184803,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32_search",
+  "lib": "jax",
+  "func": "pow",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fdca8c0000000p-127",
+  "x2": "-0x1.b4e8700000000p-1",
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 17592173968405.5,
+  "err_independent": 17592173968405.5,
+  "output_reproduced": true,
+  "ok": true
+ }
+]

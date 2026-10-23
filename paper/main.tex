@@ -1,0 +1,199 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\setlength{\tabcolsep}{3pt}
+\usepackage{xurl}
+\sloppy
+
+\title{Accuracy of Mathematical Functions in NumPy, SciPy, JAX and PyTorch\\
+\large on x86-64 and Arm64 CPUs, an NVIDIA T4 GPU and Apple MPS,\\
+in binary64, binary32, binary16 and bfloat16}
+\author{Bahumanya R G\\ RV College of Engineering, Bengaluru, India\\ \texttt{bahumanyarg@gmail.com}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We measure the accuracy of the elementary and special functions of four Python libraries widely used in scientific computing and machine learning: NumPy, SciPy, JAX and PyTorch. We use the error measure of Gladman, Innocente, Mather, Ozaki and Zimmermann~\cite{GIMOZ2026}, their rules for special values, their search algorithm and their published worst-case inputs. We test four platforms: an x86-64 CPU, an Arm64 CPU (Apple M4), an NVIDIA T4 GPU (CUDA) and the Apple M4 GPU (MPS backend of PyTorch). All binary16 and bfloat16 inputs and input pairs, and all binary32 inputs of univariate functions, are checked exhaustively, so those maxima are exact. For binary64, and for bivariate binary32 functions, we give lower bounds found with a port of their search algorithm. Every reported maximum was recomputed independently with MPFR, by calling the library again on the same platform. Most elementary functions are within a few ulps. We also find large errors that are not documented by the libraries, for example: spurious overflow in PyTorch's binary32 \texttt{sinh} and \texttt{cosh} on CPU, and in its MPS \texttt{hypot}; SciPy's binary64 \texttt{exp2}, \texttt{exp10} and \texttt{erfc} returning zero instead of a subnormal result; JAX's \texttt{bessel\_jn} returning NaN in binary32, on the Arm64 CPU, for all arguments of absolute value below 3.44 that we tried, including $J_0(0)$; and the effect of the flush-to-zero and denormals-are-zero mode under which JAX runs on CPU.
+\end{abstract}
+
+\section{Introduction}
+
+Gladman et al.~\cite{GIMOZ2026} compare the accuracy of the mathematical functions of C libraries (GNU libc, the Intel Math Library, AMD LibM, Newlib, OpenLibm, Musl, Apple, LLVM, Microsoft, FreeBSD, Arm Performance Libraries) and of the CUDA and ROCm math libraries. Similar studies exist for low precision in Matlab, GNU Octave, MSVC, MinGW, CUDA and NumPy~\cite{Ozaki2025}, and for the Julia language~\cite{MGR2025}. This document does the same for four Python libraries: NumPy~\cite{NumPy2020}, SciPy~\cite{SciPy2020}, JAX~\cite{JAX2018} and PyTorch~\cite{PyTorch2024}. Many users of these libraries call their functions directly, and the libraries do not always call the C library: they often have their own implementations, which may differ between CPU types, between CPU and GPU, and between formats.
+
+We follow~\cite{GIMOZ2026} as closely as possible: same error measure, same rules for NaN and infinities, same rounding of the reported values (3 significant digits, rounded up), their search algorithm for binary64 (with two differences, given in Section~\ref{sec:method}), and their published worst-case inputs as starting points. Section~\ref{sec:setup} describes the libraries, functions and platforms, Section~\ref{sec:method} the methodology and its validation, Section~\ref{sec:results} the results, Section~\ref{sec:findings} notable cases, Section~\ref{sec:repro} reproducibility issues, and Section~\ref{sec:related} related work.
+
+\section{Libraries, functions and platforms}\label{sec:setup}
+
+\paragraph{Versions.} We use the same Python package versions on all platforms: NumPy 2.2.6, SciPy 1.17.1, JAX and jaxlib 0.11.2 (with \texttt{jax\_enable\_x64} for binary64; \texttt{jax[cuda12]} on the GPU), PyTorch 2.9.1 (CPU wheel on x86-64, \texttt{cu126} wheel on the GPU), and \texttt{ml\_dtypes} 0.5.4 for bfloat16 arrays in JAX. The platforms are:
+\begin{itemize}
+\item \textbf{x86-64 CPU}: a Kaggle virtual machine with an Intel Xeon CPU @ 2.20\,GHz (AVX2, no AVX-512; PyTorch reports CPU capability AVX2), 4 virtual CPUs, Linux 6.18 with glibc 2.39, Python 3.13.
+\item \textbf{Arm64 CPU}: an Apple M4 under macOS 26.3.1, Python 3.13.
+\item \textbf{CUDA}: an NVIDIA Tesla T4 on Kaggle, driver 580.178.04, PyTorch built with CUDA 12.6, host CPU Intel Xeon @ 2.00\,GHz.
+\item \textbf{MPS}: the GPU of the same Apple M4, through PyTorch's MPS backend (PyTorch only; MPS has no binary64).
+\end{itemize}
+NumPy and SciPy are CPU-only. JAX has no MPS backend in this version.
+
+\paragraph{Functions.} We consider the functions of~\cite{GIMOZ2026} that at least one of the libraries provides: the univariate functions exp, exp2, exp10, expm1, log, log2, log10, log1p, sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, acosh, atanh, cbrt, sqrt, rsqrt, erf, erfc, lgamma, tgamma, j0, j1, y0, y1, and the bivariate functions atan2, hypot and pow. The other functions of~\cite{GIMOZ2026} (acospi, asinpi, atanpi, atan2pi, cospi, sinpi, tanpi, exp2m1, exp10m1, log2p1, log10p1, compoundn, pown, rootn) are not provided by any of the four libraries; pown (integer exponent) is available only through the general power function, which is covered as pow. Table~\ref{tab:names} gives the function called in each library. All functions are called on arrays (vectorised), in the format under test: inputs and outputs are NumPy \texttt{float64}, \texttt{float32} or \texttt{float16} arrays, \texttt{ml\_dtypes.bfloat16} arrays for JAX, and \texttt{torch.float64}, \texttt{float32}, \texttt{float16} or \texttt{bfloat16} tensors for PyTorch. A function is reported as not provided (``--'') when the library has no implementation for that format or device: it raises an error, returns a result of a different format, or (SciPy) has no loop for that format.
+
+\begin{table}[H]
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+function & NumPy & SciPy (\texttt{scipy.special}) & JAX & PyTorch \\ \hline
+asin, acos, atan & \texttt{arcsin}, \ldots & -- & \texttt{jnp.arcsin}, \ldots & \texttt{torch.asin}, \ldots \\
+asinh, acosh, atanh & \texttt{arcsinh}, \ldots & -- & \texttt{jnp.arcsinh}, \ldots & \texttt{torch.asinh}, \ldots \\
+exp2, expm1, log1p, cbrt & same name & same name & \texttt{jnp.*} & \texttt{torch.*} (no cbrt) \\
+sqrt & \texttt{sqrt} & -- & \texttt{jnp.sqrt} & \texttt{torch.sqrt} \\
+rsqrt & -- & -- & \texttt{jax.lax.rsqrt} & \texttt{torch.rsqrt} \\
+exp10 & -- & \texttt{exp10} & -- & -- \\
+other elementary & same name & -- & \texttt{jnp.*} & \texttt{torch.*} \\
+erf, erfc & -- & \texttt{erf}, \texttt{erfc} & \texttt{jsp.erf}, \texttt{jsp.erfc} & \texttt{special.erf}, \ldots \\
+lgamma & -- & \texttt{gammaln} & \texttt{jsp.gammaln} & \texttt{torch.lgamma} \\
+tgamma & -- & \texttt{gamma} & \texttt{jsp.gamma} & -- \\
+j0, j1 & -- & \texttt{j0}, \texttt{j1} & \texttt{bessel\_jn(x,v=$n$)[$n$]} & \texttt{special.bessel\_j0}, \ldots \\
+y0, y1 & -- & \texttt{y0}, \texttt{y1} & -- & \texttt{special.bessel\_y0}, \ldots \\
+atan2, hypot, pow & \texttt{arctan2}, \texttt{hypot}, \texttt{power} & -- & \texttt{jnp.*} & \texttt{torch.atan2}, \ldots \\
+\hline
+\end{tabularx}
+\caption{Function called in each library; \texttt{jnp} is \texttt{jax.numpy}, \texttt{jsp} is \texttt{jax.scipy.special}, \texttt{special} is \texttt{torch.special}. For JAX, j0 and j1 are obtained from \texttt{jax.scipy.special.bessel\_jn}, which computes $J_0,\ldots,J_v$; JAX has no y0 or y1. SciPy has no float16 or bfloat16 loops; NumPy has no bfloat16 type.}
+\label{tab:names}
+\end{table}
+
+\paragraph{Functions not provided.} A cell ``--'' in Tables~\ref{tab:b32cpu}--\ref{tab:bf16bigpu} means that the library does not provide the function in that format on that device. Among the functions considered: NumPy has no exp10, rsqrt, erf, erfc, lgamma, tgamma or Bessel functions, and no bfloat16 type; \texttt{scipy.special} provides only exp2, exp10, expm1, log1p, cbrt, erf, erfc, gammaln, gamma, j0, j1, y0 and y1, with no binary16 or bfloat16 loops; JAX has no exp10, y0 or y1 (its rsqrt is \texttt{jax.lax.rsqrt}, not in \texttt{jax.numpy}); PyTorch has no exp10, cbrt or tgamma, and its Bessel functions are not implemented for binary16 and bfloat16 on CPU and CUDA (they are on MPS); MPS has no binary64. We checked each of these absences by calling the libraries directly, also under other names (such as \texttt{torch.special.gamma}).
+
+\section{Methodology}\label{sec:method}
+
+\paragraph{Error measure.} We use the definition of~\cite{GIMOZ2026}: if $y$ is the value returned by the library and $z$ the exact result, the error is $|y-z|/\mathrm{ulp}(z)$, with $\mathrm{ulp}(z)=2^{\max(e-p,\,e_{\min})}$ for $2^{e-1}\le|z|<2^e$, where $p$ is the precision of the format ($p=53$, 24, 11 and 8 for binary64, binary32, binary16 and bfloat16) and $2^{e_{\min}}$ its smallest positive subnormal. When $y$ or $z$ is NaN or infinite, we apply their rules: the error is 0 if both are NaN, infinite if only one is NaN, a library result $\pm\infty$ for a finite $z$ is replaced by $\pm 2^{e_{\max}}$, the number after the largest finite one, and an exact result that overflows the format is computed with an unbounded exponent. For rsqrt we follow the rSqrt operation of IEEE 754-2019, for which $\mathrm{rsqrt}(-0)=-\infty$ (MPFR's \texttt{mpfr\_rec\_sqrt} returns $+\infty$ there). Values are given with 3 significant digits, rounded up; $0.500$ means the result is correctly rounded for all inputs tested. The error engine is a port of \texttt{ulp\_error}, \texttt{ulp\_error\_double} (\texttt{check\_exhaustive.c}) and \texttt{distance} (\texttt{check\_sample2.c}) from their repository (commit \texttt{c2b897fb}), with the format parameters made explicit for binary16 and bfloat16. The exact value is computed with MPFR~\cite{MPFR2007}. For speed, the correctly rounded value in the small formats is first obtained by rounding the correctly rounded binary64 result of CORE-MATH~\cite{CoreMath2022} (commit \texttt{7ebab739}), which is exact except when that binary64 value is a midpoint of the small format, in which case MPFR is used; for sqrt, the binary64 square root of the hardware, which IEEE 754 requires to be correctly rounded, is used instead. This fast path agreed with direct MPFR rounding on all of $10^5$ random inputs for each of the 84 combinations of function and small format, and on about $10^5$ random finite inputs per format for sqrt. For rsqrt the exact value is computed with MPFR for every input. All reported maxima are recomputed with MPFR.
+
+\paragraph{Exhaustive tests.} For univariate functions in binary32, all $2^{32}-2^{24}$ finite inputs are tested. For binary16 and bfloat16, all finite inputs are tested, and for the bivariate functions all pairs of finite inputs ($63488^2$ pairs for binary16, $65280^2$ for bfloat16). These maxima are therefore exact for the platform tested.
+
+\paragraph{Search.} For binary64, and for bivariate binary32 functions, an exhaustive test is not possible, and the values are lower bounds. For each function and library we (1) evaluate the worst-case inputs published in~\cite{GIMOZ2026} for all libraries, and those for GNU libc 2.39 in their repository (340 inputs in total), (2) evaluate $2^{20}$ inputs with uniformly random bit patterns, and (3) run 4 instances, with different random seeds, of a vectorised port of the recursive search of their program \texttt{check\_sample2.c} described in Section~3.1 of~\cite{GIMOZ2026} (threshold $t=1000$, keeping the 20 intervals with the largest sample error at each level). We use only the first of their three strategies for choosing intervals, which they found the most effective, and for bivariate functions we split each interval along its wider dimension only, whereas they split along both. In total about $9.3\cdot10^6$ inputs are evaluated per function and library ($1.95\cdot10^7$ for the bivariate functions in binary64).
+
+\paragraph{Flush to zero.} Some backends run with a flush-to-zero (FTZ) and/or denormals-are-zero (DAZ) mode. We probe each backend and format with the library's own elementwise multiplication: a subnormal number times 1 gives zero under DAZ, and the smallest normal number times 0.5 gives zero under FTZ. JAX on CPU (both platforms) flushes in binary64, binary32 and bfloat16; PyTorch on MPS flushes in binary32 and bfloat16; no other backend flushes. For JAX on CPU this is by design: XLA's CPU client runs every computation under \texttt{tsl::port::ScopedFlushDenormal}, which sets both FTZ and DAZ.\footnote{\url{https://github.com/openxla/xla/blob/91888df6ce85102c30220e41d952065925e10886/xla/pjrt/cpu/cpu_client.cc\#L1581}, \url{https://github.com/openxla/xla/blob/91888df6ce85102c30220e41d952065925e10886/third_party/tsl/tsl/platform/denormal.cc\#L151}} On a flushing backend, a result is classified as flushed when the library returns zero for a nonzero subnormal exact result, or when an input with a subnormal argument returns the same value as the library returns when that argument is replaced by zero. The main value in each table cell follows the rules of~\cite{GIMOZ2026}, so flushed results count as ordinary errors. When different, the table gives in parentheses the largest error excluding the flushed results and the inputs where exactly one of $y$ and $z$ is NaN; this second value is the more informative one for users who accept the FTZ/DAZ mode. Marks: f = some results flushed, n = some spurious NaN (NaN returned for a non-NaN exact result), m = some missing NaN (a number returned where the exact result is NaN).
+
+\paragraph{Independent verification.} Every reported maximum was checked by a separate program, on the platform where it was found: the library is called again at the reported input, in 41 calling contexts (arrays of length 1 to 17, 31, 64, 1000 and 4096, with the input at the first and at the last position), and at least one context must reproduce the stored output bit for bit; the error is recomputed with \texttt{gmpy2} (MPFR) at 256 bits, rising to 1024 bits until two precisions agree, using an independent implementation of the ulp definition. The same check is applied to the input giving the largest error among the flushed results, which determines the main table value on flushing backends, and to one example input of each spurious or missing NaN, for which we check that exactly one of the library result and the exact result is NaN. All checks succeeded: for the largest errors excluding flushed results and NaN, 281 of 281 on x86-64, 281 of 281 on Arm64, 179 of 179 on the T4 and 68 of 68 on MPS; for the flushed maxima and NaN examples, 90 of 90, 94 of 94, 22 of 22 and 50 of 50.
+
+\paragraph{Validation of the error engine.} Before any measurement, we checked on x86-64 Linux that our engine reproduces values published by the authors of~\cite{GIMOZ2026}: for OpenLibm 0.8.7, the exhaustive binary32 maxima of 8 functions and the binary64 errors at the worst-case inputs of 31 functions, from the tables of~\cite{GIMOZ2026}; for GNU libc 2.39, the exhaustive binary32 maxima of 10 functions and the binary64 errors at the worst-case inputs of 28 functions, from the corresponding table in their repository (commit \texttt{c2b897fb}). All 77 values agree to the 3 printed digits.
+
+\section{Results}\label{sec:results}
+
+Tables~\ref{tab:b32cpu}--\ref{tab:bf16bigpu} give the results. The inputs giving each maximum, the library output and the counts of flushed and NaN cases are given in the accompanying CSV files. As in~\cite{GIMOZ2026}, some functions have the same maximum, at the same input, in different libraries, which suggests a common code base.
+
+\input{tables/b32_cpu.tex}
+\input{tables/b32_gpu.tex}
+\input{tables/b32bi_cpu.tex}
+\input{tables/b32bi_gpu.tex}
+\input{tables/b64_cpu.tex}
+\input{tables/b64_gpu.tex}
+\input{tables/b16_cpu.tex}
+\input{tables/b16_gpu.tex}
+\input{tables/b16bi_cpu.tex}
+\input{tables/b16bi_gpu.tex}
+\input{tables/bf16_cpu.tex}
+\input{tables/bf16_gpu.tex}
+\input{tables/bf16bi_cpu.tex}
+\input{tables/bf16bi_gpu.tex}
+
+\paragraph{Summary.}
+NumPy's largest errors are 3.84 ulps in binary32 and 3.67 ulps in binary64. In binary32 NumPy is less accurate on x86-64 than on Arm64 for exp (2.55 vs 0.514 ulp) and log (3.84 vs 0.563 ulp): on x86-64 with AVX2 it uses its own vector code for these two functions, and on Arm64 the C library.\footnote{\url{https://github.com/numpy/numpy/blob/v2.2.6/numpy/_core/src/umath/loops_exponent_log.dispatch.c.src\#L539}; the source states a largest error of 3.83 ulps for log over all binary32 inputs.} SciPy's elementary functions (exp2, exp10, expm1, log1p, cbrt) are within 0.501 ulp in binary32 and within 4.20 ulps in binary64, except for the underflow cases of exp2 and exp10 in binary64 (Section~\ref{sec:findings}). PyTorch on CPU is within about 1 ulp for most elementary functions in binary32, and within 3.53 ulps for all of them in binary64, except for the spurious overflows of Section~\ref{sec:findings}. On the T4, JAX and PyTorch have the same maximum in binary64 for 19 of the 24 elementary functions that both provide, and all their binary64 maxima for elementary functions are within 2.52 ulps, except JAX's exp2 (726 ulps). PyTorch on MPS has errors up to 4.91 ulps in binary32 for the elementary functions, not counting flushed results and NaN mismatches, except for expm1 and hypot.
+
+In binary16, NumPy, and PyTorch on CPU and on the T4, have errors of at most 0.501 ulp for all functions, except PyTorch's erf on CPU (4.93 ulps), rsqrt on the Arm64 CPU (1.33 ulps) and lgamma on the T4 (1.43 ulps). They evaluate the binary16 functions in binary32 and round the result to binary16, which gives the correctly rounded binary16 result except when the exact result is very close to the midpoint of two binary16 numbers. In bfloat16, PyTorch on the T4 is correctly rounded for all univariate functions (0.500), and so is PyTorch on CPU except erf (144 ulps), lgamma (2.23 ulps), sinh and cosh (87.2 ulps, spurious overflow), and rsqrt on the Arm64 CPU (1.15 ulps). JAX's binary16 elementary functions have errors up to 13.8 ulps (exp2); in bfloat16, up to 101 ulps (exp2) away from the subnormal range, and up to 256 ulps (asin) near it, not counting flushed results.
+
+The square root, a correctly rounded operation in IEEE 754, is correctly rounded in all libraries and on all platforms (not counting flushed results), except PyTorch on x86-64 (0.750 ulp in binary32, 0.530 in binary64) and JAX on the T4 (0.944 ulp in binary32). The reciprocal square root rsqrt has errors up to 1.52 ulps.
+
+\paragraph{Comparison with the CUDA results of~\cite{GIMOZ2026}.} PyTorch's CUDA kernels call the functions of the CUDA math library (for example \texttt{::sin}, \texttt{::erf}, \texttt{lgamma}),\footnote{\url{https://github.com/pytorch/pytorch/blob/v2.9.1/aten/src/ATen/native/cuda/UnaryGeometricSinKernel.cu\#L38}, \url{https://github.com/pytorch/pytorch/blob/v2.9.1/aten/src/ATen/native/cuda/UnarySpecialOpsKernel.cu\#L257}} which~\cite{GIMOZ2026} also measures (version 13.3.1, on a T4). For the 24 univariate binary32 functions that both cover (excluding the Bessel functions, which PyTorch implements itself), PyTorch's exhaustive maxima on our T4 (CUDA 12.6) are identical to their values for 20 functions, and differ by at most 0.09 ulp for the other four (acosh, asinh, erf, expm1). In binary64, 25 of the 27 lower bounds are identical; for exp ours is 0.929 against 0.928, and for asinh 2.20 against 2.29. We attribute no cause to the small differences, which may come from the different CUDA versions or, in binary64, from the search.
+
+The largest values in the tables, from about $10^6$ ulps to Inf, are not rounding errors in the usual sense. They come from spurious overflow, results returned as zero, flushed subnormals, mishandled subnormal inputs, spurious NaN, the zeros of lgamma, and Bessel functions for large arguments. They are described below.
+
+\section{Notable cases}\label{sec:findings}
+All inputs and outputs below were confirmed by the independent verification of Section~\ref{sec:method}. Inputs are given in hexadecimal, with a decimal approximation.
+
+\subsection{Spurious overflow}
+\begin{itemize}
+\item PyTorch on CPU (both platforms), binary32: for $x=\texttt{0x1.62e43p+6}\approx 88.7228$, \texttt{sinh} and \texttt{cosh} return $+\infty$, whereas the exact result $\approx 1.70141\cdot10^{38}$ is below the largest binary32 number ($\approx 3.40282\cdot10^{38}$); the error is $8.39\cdot10^6$ ulps. In bfloat16, for $x=\texttt{0x1.64p+6}=89$, they return $+\infty$ instead of $\approx 2.24481\cdot10^{38}$ (87.2 ulps).
+\item PyTorch on x86-64, binary64: for $x=\texttt{0x1.62e42fefa39f0p+9}\approx 709.783$, $\sinh(x)$ and $\cosh(-x)$ return $+\infty$ instead of $\approx 8.98847\cdot10^{307}$ ($4.51\cdot10^{15}$ ulps). The same PyTorch version on Arm64 has errors of 0.539 and 0.523 ulps. This is consistent with the source code: on x86-64, binary64 functions use SLEEF vector code, while on Arm64 there is no NEON vector type for binary64 and the system libm is called.\footnote{\url{https://github.com/pytorch/pytorch/blob/v2.9.1/aten/src/ATen/cpu/vec/vec256/vec256_double.h}, \url{https://github.com/pytorch/pytorch/blob/v2.9.1/aten/src/ATen/cpu/vec/vec_base.h\#L536}}
+\item PyTorch on CPU (both platforms), binary32 \texttt{lgamma}: for $x=\texttt{0x1.84c274p+121}\approx 4.03711\cdot10^{36}$ it returns $+\infty$, whereas $\log\Gamma(x)\approx 3.36245\cdot10^{38}$ is finite ($2.00\cdot10^5$ ulps).
+\item PyTorch on MPS, binary32 \texttt{hypot}: for $x=\texttt{0x1.b73f2ep+64}\approx 3.16511\cdot10^{19}$ and $y=\texttt{0x1.5c0cd6p-62}$, it returns $+\infty$ instead of $\approx 3.16511\cdot10^{19}$ ($1.55\cdot10^{26}$ ulps); in bfloat16, $\mathrm{hypot}(0,2^{64})$ returns $+\infty$. PyTorch's MPS backend computes hypot as $\sqrt{x^2+y^2}$ without scaling.\footnote{\url{https://github.com/pytorch/pytorch/blob/v2.9.1/aten/src/ATen/native/mps/operations/BinaryOps.mm\#L281}}
+\item SciPy, binary64 \texttt{gammaln} (both CPUs): for the subnormal $x=\texttt{0x0.00000002f6806p-1022}\approx 1.53497\cdot10^{-317}$ it returns $+\infty$ instead of $\approx 729.491$. With the rules of~\cite{GIMOZ2026} ($+\infty$ replaced by $2^{1024}$) the error is too large to be represented in binary64, hence Inf.
+\end{itemize}
+
+\subsection{Zero returned for a nonzero result}
+These cases occur on backends that do not flush subnormals, or give a normal exact result, so they are not explained by an FTZ mode.
+\begin{itemize}
+\item SciPy, binary64 (both CPUs): \texttt{exp2}($\texttt{-0x1.0000000000001p+10}$) and \texttt{exp10}($\texttt{-0x1.34413509f79ffp+8}\approx -308.255$) return 0 instead of the subnormal $\approx 5.56268\cdot10^{-309}$ ($1.13\cdot10^{15}$ ulps): there is no gradual underflow. Likewise \texttt{erfc}($\texttt{0x1.aa4499161cd48p+4}\approx 26.6417$) returns 0 instead of $\approx 1.17718\cdot10^{-310}$ ($2.39\cdot10^{13}$ ulps); JAX on the T4 returns 0 at the same input.
+\item SciPy, binary64 \texttt{gamma} (both CPUs): for $x=\texttt{-0x1.58000dca7a802p+7}\approx -172.0001$ it returns $-0$, whereas $\Gamma(x)\approx -4.45015\cdot10^{-308}$ is a normal number ($9.01\cdot10^{15}$ ulps).
+\item PyTorch on Arm64 CPU, binary32 \texttt{erf}: for the subnormal $x=\texttt{0x1.fffffcp-127}\approx 1.17549\cdot10^{-38}$ it returns 0 instead of $\approx 1.32640\cdot10^{-38}$, a normal number ($9.47\cdot10^6$ ulps), and it also returns 0 for some normal inputs, e.g.\ $x=\texttt{0x1.c5bf8ap-126}\approx 2.08351\cdot10^{-38}$ ($8.39\cdot10^6$ ulps); the largest error on x86-64 is 0.780 ulp. In bfloat16, PyTorch's \texttt{erf} returns 0 for small arguments on both CPUs (144 ulps). This matches PyTorch issue \#199850,\footnote{\url{https://github.com/pytorch/pytorch/issues/199850}} which reports that CPU \texttt{erf} in bfloat16 and float16 returns 0 for $|x|\le 1.8\cdot10^{-7}$, and that float32 is affected where the vectorised path is used.
+\item PyTorch on MPS, binary32 \texttt{erfc}: for $x=\texttt{0x1.dd5d1ap+2}\approx 7.45881$ it returns 0 instead of $\approx 5.16988\cdot10^{-26}$ ($1.68\cdot10^7$ ulps). PyTorch's Metal code computes \texttt{erfc} as $1-\mathrm{erf}(x)$.\footnote{\url{https://github.com/pytorch/pytorch/blob/v2.9.1/c10/metal/special_math.h\#L53}}
+\item JAX on CPU, binary32: \texttt{exp2}$(-126)$ returns 0 instead of $2^{-126}$, the smallest normal number ($8.39\cdot10^6$ ulps); and \texttt{arcsin} returns 0 for $x=2^{-125}$ (Arm64) and $x=\texttt{0x1.fffffep-126}$ (x86-64), whose exact results are normal numbers ($8.39\cdot10^6$ and $1.68\cdot10^7$ ulps); in binary64, \texttt{arcsin} returns 0 for $x=\texttt{0x1.fffffb43d9679p-1022}$ on both CPUs ($9.01\cdot10^{15}$ ulps). JAX computes exp2$(x)$ as $\exp(x\ln 2)$,\footnote{\url{https://github.com/jax-ml/jax/blob/jax-v0.11.2/jax/_src/lax/lax.py\#L4606}} so if the computed value falls just below $2^{-126}$ it is subnormal and is flushed to zero; we have not checked that this is what happens, nor investigated the arcsin case.
+\end{itemize}
+
+\subsection{Zeros of lgamma}
+The rules of~\cite{GIMOZ2026} measure the error at an exact zero in units of the smallest subnormal. JAX's \texttt{gammaln} returns $2^{-21}$ instead of 0 for $x=1$ in binary32 on CPU (error $2^{128}\approx 3.40\cdot10^{38}$, printed 3.41e38), and $2^{-50}$ for $x=2$ in binary64 on the T4 (error $2^{1024}$, Inf). JAX and PyTorch have large errors near the negative zeros of $\log|\Gamma|$, as several libraries in~\cite{GIMOZ2026}: for example $2.21\cdot10^{17}$ ulps for JAX in binary64 at $x=\texttt{-0x1.3a7fc9600f86cp+1}\approx -2.45702$.
+
+\subsection{Bessel functions}
+\begin{itemize}
+\item JAX (\texttt{bessel\_jn}), binary32: $J_0$ returns NaN for 2\,974\,378\,448 finite inputs on CPU (69.5\% of them) and 2\,571\,725\,264 on the T4 (60.1\%), and $J_1$ for 2\,159\,601\,720 on both (50.5\%). On the Arm64 CPU, both $J_0$ and $J_1$ return NaN for all inputs with $|x|<\texttt{0x1.b8e838p+1}\approx 3.44459$ that we tried (all inputs in $[2, 3.44459)$, and a regular sample of $1.1\cdot10^7$ inputs in $[0,2)$, including $x=0$), and none in $[3.44459, 4)$; $J_0$ also returns NaN for large arguments (we observed it for $|x|\ge 2^{79}$ when sampling each binade), where it may also return $-\infty$: e.g.\ $J_0(\texttt{0x1.22184ep+79}\approx 6.84967\cdot10^{23})$, whose exact value is $\approx 7.31765\cdot10^{-19}$. Spurious NaN also occur in binary64, binary16 and bfloat16. In binary32 and binary64, \texttt{bessel\_jn} also returns $J_0(100)\approx -1.4586$, whereas $|J_0(x)|\le 1$ for real $x$ (the exact value is $\approx 0.019986$).
+\item SciPy and PyTorch (CPU and T4), binary64: for $x=\texttt{0x1.782b7a20df6d4p+66}\approx 1.08424\cdot10^{20}$, near a zero of $J_0$, both return $\approx 5.41830\cdot10^{-11}$ for $J_0$ (the same bits on the CPUs), whereas $J_0(x)\approx -1.96566\cdot10^{-28}$ ($2.42\cdot10^{33}$ ulps); both also return the opposite value for $Y_1$ at this input. SciPy calls the Cephes implementation, and PyTorch's own implementation returns the same bits, which suggests a common origin.\footnote{\url{https://github.com/scipy/xsf/blob/0d0a593fd31073af10062d0093144e13ae34f8f3/include/xsf/bessel.h\#L643}, \url{https://github.com/pytorch/pytorch/blob/v2.9.1/aten/src/ATen/native/Math.h\#L2387}}
+\item PyTorch, binary32, on all four platforms: $J_0(\texttt{0x1.4665d2p+24}\approx 21390802)$ returns $\approx 1.21986\cdot10^{-4}$ instead of $\approx 2.28994\cdot10^{-15}$ ($5.77\cdot10^{17}$ ulps). On CPU, PyTorch evaluates the binary32 Bessel functions entirely in binary32, including the argument reduction $x-\pi/4$.
+\end{itemize}
+
+\subsection{Subnormal inputs in JAX}
+Some results of JAX for subnormal inputs are not covered by our FTZ/DAZ classification, since the output differs from the one obtained for a zero input:
+\begin{itemize}
+\item binary32 \texttt{cbrt}, for $x=2^{-147}$: JAX returns $2^{-147}$ on Arm64 and $\approx -5.60\cdot10^{-16}$ (\texttt{-0x1.428a3p-51}, a negative number) on x86-64, whereas $\sqrt[3]{x}\approx 1.77636\cdot10^{-15}$ ($8.39\cdot10^6$ and $1.11\cdot10^7$ ulps). The same occurs in bfloat16 for $x=2^{-132}$.
+\item binary32 \texttt{arctan2} on Arm64: for $y=\texttt{-0x1.e870dcp-127}$ and $x=\texttt{0x1.399fd0p-127}$, both subnormal, JAX returns $y$ instead of $\approx -1$ ($1.68\cdot10^7$ ulps).
+\end{itemize}
+On x86-64 only:
+\begin{itemize}
+\item binary64 \texttt{power}: for $x=\texttt{0x0.ffdffffffffd4p-1022}\approx 2.22399\cdot10^{-308}$ and $y=\texttt{-0x1.e773a3d6977bfp-1}\approx -0.952054$, it returns $\approx 1.23486\cdot10^{308}$ instead of $\approx 7.98336\cdot10^{292}$ ($1.40\cdot10^{31}$ ulps). Similar errors occur in binary32 ($2.29\cdot10^{13}$) and bfloat16 ($2.98\cdot10^8$).
+\item binary64 \texttt{arctan2}: for $y=\texttt{0x0.b7a7d26c61063p-1022}>0$ and $x=\texttt{-0x1.0ccf56b17d074p-175}<0$ it returns $-\pi$ (rounded) instead of $\approx +\pi$ ($1.42\cdot10^{16}$ ulps).
+\end{itemize}
+
+\subsection{Other cases}
+\begin{itemize}
+\item JAX, binary64 \texttt{exp2}, on CPU and on the T4: 726 ulps, for $x\approx 1022.0$ (e.g.\ $x=\texttt{0x1.fefff89f994bfp+9}$ on x86-64). This is consistent with the evaluation as $\exp(x\ln 2)$: for $x\approx 1022$, rounding $x\ln 2\approx 708.4$ to binary64 gives an absolute error up to $2^{-44}\approx 5.68\cdot10^{-14}$, and the binary64 value of $\ln 2$ has an error of $\approx 2.32\cdot10^{-17}$, which contributes up to $1022\cdot 2.32\cdot10^{-17}\approx 2.37\cdot10^{-14}$. The sum, $\approx 8.05\cdot10^{-14}$, becomes a relative error of the same size in the result, i.e.\ up to about 725 ulps when the result is close to the top of its binade, to which the error of $\exp$ itself is added.
+\item JAX, \texttt{jax.scipy.special.gamma} is computed as $\mathrm{sign}\cdot\exp(\log|\Gamma(x)|)$,\footnote{\url{https://github.com/jax-ml/jax/blob/jax-v0.11.2/jax/_src/scipy/special.py\#L307}} consistent with its errors of $4.32\cdot10^3$ ulps in binary64 on CPU (not counting flushed results) and $4.02\cdot10^3$ on the T4.
+\item PyTorch on MPS, binary32 \texttt{expm1}: $1.13\cdot10^5$ ulps (not counting flushed results), at $x=\texttt{0x1.d49148p-17}\approx 1.39644\cdot10^{-5}$, where it returns $\approx 1.40667\cdot10^{-5}$ instead of $\approx 1.39645\cdot10^{-5}$.
+\end{itemize}
+
+\section{Reproducibility}\label{sec:repro}
+\paragraph{Calling context.} Our verification calls each library at the reported input in 41 contexts. For some maxima the output depends on the context: on x86-64 for 25 maxima (19 PyTorch, 6 JAX), on Arm64 for 16 (12 PyTorch, 4 JAX), never for NumPy or SciPy, and never on the GPUs. For example, PyTorch's CPU elementwise loop processes vectors in its main loop and calls the scalar C library function for the remaining elements,\footnote{\url{https://github.com/pytorch/pytorch/blob/v2.9.1/aten/src/ATen/native/cpu/Loops.h\#L221}} so the result can depend on the array length and on the position of the input. Our tests call the libraries on large arrays (for example $2^{24}$ elements per call in the exhaustive binary32 tests). Users calling the functions on other array shapes may observe different errors at the same input.
+
+\paragraph{Machine.} PyTorch selects its vector code at run time from the CPU features. We re-ran the verification of 273 of the x86-64 maxima on a second Kaggle instance, whose CPU we did not record: 262 of them were reproduced; for the 11 others, all PyTorch, the output differed by one ulp. On two further instances with the same CPU model and capability as our measurements (Intel Xeon @ 2.20\,GHz, AVX2), the stored outputs of these 11 cases were reproduced in all the calling contexts we tried. The x86-64 PyTorch values are therefore specific to AVX2; NumPy, too, selects different code on CPUs with AVX-512 (on Linux, with SVML).\footnote{\url{https://github.com/numpy/numpy/blob/v2.2.6/numpy/_core/meson.build\#L87}}
+
+\paragraph{Versions.} JAX and XLA change quickly: JAX's documentation on numerical accuracy~\cite{JAXaccuracy2026} has been updated frequently since it was added in September 2026. All values in this document are for the versions given in Section~\ref{sec:setup}.
+
+\section{Related work}\label{sec:related}
+The closest work is the study of Gladman et al.~\cite{GIMOZ2026}, whose methodology we follow; it covers C libraries and the CUDA and ROCm math libraries, but no Python library. Ozaki~\cite{Ozaki2025} studies low-precision functions with verified computations, including NumPy 1.21 in binary32 on x86 (exhaustive), with largest errors from 0.51 to 3.84 ulps; for log, both his value and ours (NumPy 2.2.6, x86-64 with AVX2) are 3.84 ulps. He uses another definition of ulp (Harrison's), so other values are not directly comparable. Mikaitis, Giordano and Rizyal~\cite{MGR2025} do the same as~\cite{GIMOZ2026} for Julia.
+
+JAX now publishes tables of largest errors in its documentation~\cite{JAXaccuracy2026}, exhaustive for the 16-bit formats and for univariate binary32, on x86-64 CPUs, recent NVIDIA GPUs and TPUs. It uses a different reference (binary64 for the smaller formats), reports errors in steps of 0.5 ulp, and handles subnormals and overflow differently from~\cite{GIMOZ2026}; we did not compare cell by cell, since that documentation changes with each JAX version. The \texttt{ulpwise} package~\cite{ulpwise} samples 61 functions of the same four libraries on an x86-64 CPU. Rydahl et al.~\cite{Rydahl2023} measure C math library functions on GPUs; Vanover et al.~\cite{FPDiff2020} look for discrepancies between numerical libraries, including SciPy; Lim et al.~\cite{RLibm2021} generate correctly rounded functions for bfloat16 and other formats.
+
+To our knowledge, no previous study covers SciPy, JAX and PyTorch with the methodology of~\cite{GIMOZ2026}, the Arm64 CPU or the MPS backend, or binary64 searches for these libraries.
+
+\section{Limitations}
+\begin{itemize}
+\item The binary64 values and the bivariate binary32 values are lower bounds; the true largest errors may be larger.
+\item The x86-64 results are for one CPU type (AVX2, no AVX-512); NumPy and PyTorch use other code on CPUs with AVX-512. The GPU results are for the T4 only, and for the default settings of each library (in particular, no fast-math options).
+\item We only consider rounding to nearest, the default.
+\item Results can depend on the array shape (Section~\ref{sec:repro}); we report the largest error in the calling contexts used by our tests.
+\item We did not determine the cause of every large error; when we give one, it is either read in the source code (with a link) or stated as consistent with the observations.
+\end{itemize}
+
+\section*{Data availability}
+The code, the raw results, the inputs giving each maximum (CSV) and the script that regenerates every table (\texttt{make\_tables.py}) are available at \url{https://github.com/bahumanyarg11/python-math-accuracy}.
+
+\section*{Acknowledgements}
+The computations were run on Kaggle's free CPU and GPU instances and on the author's own laptop. Software tools, including AI-based coding assistants, were used in preparing the code and the text; all reported values were verified independently as described in Section~\ref{sec:method}.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}

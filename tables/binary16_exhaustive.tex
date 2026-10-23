@@ -1,0 +1,43 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|ccc|ccc|cc|c|}
+\hline
+platform & \multicolumn{3}{c|}{x86-64 CPU} & \multicolumn{3}{c|}{Arm64 CPU (M4)} & \multicolumn{2}{c|}{CUDA (T4)} & \multicolumn{1}{c|}{MPS (M4)} \\
+library & NumPy & JAX & PyTorch & NumPy & JAX & PyTorch & JAX & PyTorch & PyTorch \\ \hline
+exp & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+exp2 & 0.501 & 13.8 & 0.501 & 0.501 & 13.8 & 0.501 & 13.8 & 0.501 & 0.501 \\
+expm1 & 0.501 & 2.11 & 0.501 & 0.501 & 2.11 & 0.501 & 0.501 & 0.501 & 1.23 \\
+log & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.509 & 0.501 & 0.501 \\
+log2 & 0.500 & 1.62 & 0.500 & 0.500 & 1.62 & 0.500 & 1.62 & 0.500 & 0.501 \\
+log10 & 0.501 & 1.50 & 0.501 & 0.501 & 1.50 & 0.501 & 1.50 & 0.501 & 0.501 \\
+log1p & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+sin & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+cos & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+tan & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+asin & 0.500 & 1.33 & 0.501 & 0.500 & 1.33 & 0.501 & 0.501 & 0.501 & 0.500 \\
+acos & 0.501 & 1.08 & 0.501 & 0.501 & 1.08 & 0.501 & 0.501 & 0.501 & 0.501 \\
+atan & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+sinh & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.500 & 0.500 & 0.501 \\
+cosh & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+tanh & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 \\
+asinh & 0.501 & 1.32 & 0.501 & 0.501 & 1.32 & 0.501 & 0.501 & 0.501 & 0.501 \\
+acosh & 0.501 & 1.78 & 0.501 & 0.501 & 1.78 & 0.501 & 0.501 & 0.501 & 0.501 \\
+atanh & 0.500 & 1.23 & 0.500 & 0.500 & 1.23 & 0.500 & 0.500 & 0.500 & 0.501 \\
+cbrt & 0.501 & 0.501 & -- & 0.501 & 0.501 & -- & 0.501 & -- & -- \\
+sqrt & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 \\
+rsqrt & -- & 0.500 & 0.500 & -- & 0.500 & 1.33 & 0.500 & 0.500 & 0.500 \\
+erf & -- & 0.501 & 4.93 & -- & 0.501 & 4.93 & 0.500 & 0.500 & 0.501 \\
+erfc & -- & 0.501 & 0.501 & -- & 0.501 & 0.501 & 0.501 & 0.501 & 0.744 \\
+lgamma & -- & 12.5 & 0.501 & -- & 12.5 & 0.501 & 7.58 & 1.43 & 2.58 \\
+tgamma & -- & 8.29 & -- & -- & 8.29 & -- & 8.29 & -- & -- \\
+j0 & -- & Inf (0.500)$^{\rm n}$ & -- & -- & Inf (0.500)$^{\rm n}$ & -- & Inf (0.500)$^{\rm n}$ & -- & 1.98e5 \\
+j1 & -- & Inf (0.500)$^{\rm n}$ & -- & -- & Inf (0.500)$^{\rm n}$ & -- & Inf (0.500)$^{\rm n}$ & -- & 1.34e3 \\
+y0 & -- & -- & -- & -- & -- & -- & -- & -- & 581 \\
+y1 & -- & -- & -- & -- & -- & -- & -- & -- & 75.2 \\
+\hline
+\end{tabular}
+\end{small}
+\caption{binary16: largest error over all inputs (exhaustive). Values: largest error in ulps under the rules of Gladman et al. (3 significant digits rounded up; an input where only one of the library result and the exact result is NaN gives Inf). In parentheses, when different: the largest error excluding results affected by a flush-to-zero/denormals-are-zero mode of the backend and NaN mismatches. 0.500 = correctly rounded on all inputs; -- = function not provided for this format/backend; marks: f = some results flushed by the backend's FTZ/DAZ mode, n = spurious NaN for some inputs, m = NaN missing (number returned where the result is NaN). }
+\label{tab:binary16}
+\end{table}

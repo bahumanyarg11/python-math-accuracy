@@ -1,0 +1,26 @@
+{
+ "func": "cos",
+ "lib": "numpy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 0.9473497651633681,
+ "max_str": "0.948",
+ "x1": "0x1.2f29eb4e99fa2p+7",
+ "x2": null,
+ "y": "0x1.6a0751dc5d2bcp-1",
+ "seed_err": 0.9473497651633681,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337529,
+ "seconds": 3.7548277378082275,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

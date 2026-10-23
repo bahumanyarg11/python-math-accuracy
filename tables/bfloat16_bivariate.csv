@@ -1,0 +1,4 @@
+function,JAX x86-64 CPU,PyTorch x86-64 CPU,JAX Arm64 CPU (M4),PyTorch Arm64 CPU (M4),JAX CUDA (T4),PyTorch CUDA (T4),PyTorch MPS (M4)
+atan2,Inf (0.501) [fn],0.501,256 [f],0.501,0.501,0.501,256 (0.501) [f]
+hypot,180 (1.74) [f],0.500,180 (1.74) [f],0.500,0.501,0.500,2.37e21 [f]
+pow,2.98e8 [f],0.501,128 [f],0.501,0.501,0.501,Inf (128) [f]

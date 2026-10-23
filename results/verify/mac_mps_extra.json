@@ -1,0 +1,896 @@
+[
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "atan",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fffffc0000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388607.0,
+  "err_independent": 8388607.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "erf",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fffffc0000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 9465529.379751587,
+  "err_independent": 9465529.379751587,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "erfc",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.2639c00000000p+3",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388590.713210993,
+  "err_independent": 8388590.713210993,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "exp",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.5d58a00000000p+6",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388581.986888149,
+  "err_independent": 8388581.986888148,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "exp2",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.f800020000000p+6",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388563.6386977425,
+  "err_independent": 8388563.6386977425,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "expm1",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fffffc0000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388607.000000001,
+  "err_independent": 8388607.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "j1",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.fffffe0000000p-126",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 8388607.5,
+  "err_independent": 8388607.5,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "lgamma",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 4.460149039706125e+43,
+  "err_independent": 4.460149039706125e+43,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "lgamma",
+  "fmt": "binary32",
+  "check": "spnan",
+  "x1": "-0x1.895f1e0000000p+121",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "log",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "log10",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "log2",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "rsqrt",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "sqrt",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "y0",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32",
+  "lib": "torch",
+  "func": "y1",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-149",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16",
+  "lib": "torch",
+  "func": "acos",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "-0x1.2c00000000000p-18",
+  "x2": null,
+  "y_stored": "0x1.9200000000000p+0",
+  "outputs_seen": [
+   "0x1.9200000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000162746929034,
+  "err_independent": 0.5000162746929033,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "asin",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.00000000000001,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "asinh",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.0,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "atan",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.0,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "atanh",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.00000000000001,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "erf",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 143.30415422113012,
+  "err_independent": 143.3041542211301,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "erfc",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.2800000000000p+3",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 45.75613342024792,
+  "err_independent": 45.75613342024792,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "exp",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.5e00000000000p+6",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 108.69817606686516,
+  "err_independent": 108.69817606686516,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "exp2",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.fa00000000000p+6",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 90.50966799187809,
+  "err_independent": 90.50966799187809,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "expm1",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.00000000000001,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "j1",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fe00000000000p-126",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.5,
+  "err_independent": 127.5,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "lgamma",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 6.80564733841877e+38,
+  "err_independent": 6.80564733841877e+38,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "lgamma",
+  "fmt": "bfloat16",
+  "check": "spnan",
+  "x1": "-0x1.8a00000000000p+121",
+  "x2": null,
+  "y_stored": null,
+  "outputs_seen": [
+   "nan"
+  ],
+  "exact_is_nan": false,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "log",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "log10",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "log1p",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.0,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "log2",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "rsqrt",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "sin",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.0,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "sinh",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.00000000000001,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "sqrt",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "tan",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.00000000000001,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "tanh",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": null,
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 127.0,
+  "err_independent": 127.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "y0",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16",
+  "lib": "torch",
+  "func": "y1",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "-0x1.0000000000000p-133",
+  "x2": null,
+  "y_stored": "-inf",
+  "outputs_seen": [
+   "-inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": NaN,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "torch",
+  "func": "atan2",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.bf00000000000p-16",
+  "x2": "-0x1.c100000000000p-7",
+  "y_stored": "0x1.9200000000000p+1",
+  "outputs_seen": [
+   "0x1.9200000000000p+1"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5001057643949374,
+  "err_independent": 0.5001057643949374,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "torch",
+  "func": "hypot",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.0500000000000p-16",
+  "x2": "0x1.0a00000000000p-11",
+  "y_stored": "0x1.0a00000000000p-11",
+  "outputs_seen": [
+   "0x1.0a00000000000p-11"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000660521351044,
+  "err_independent": 0.5000660521351044,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary16_bivar",
+  "lib": "torch",
+  "func": "pow",
+  "fmt": "binary16",
+  "check": "flushmax",
+  "x1": "0x1.cac0000000000p-13",
+  "x2": "-0x1.e600000000000p-15",
+  "y_stored": "0x1.0000000000000p+0",
+  "outputs_seen": [
+   "0x1.0000000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 0.5000984581273126,
+  "err_independent": 0.5000984581273126,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16_bivar",
+  "lib": "torch",
+  "func": "atan2",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.0000000000000p-133",
+  "x2": "0x1.0000000000000p-106",
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 256.0,
+  "err_independent": 256.0,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16_bivar",
+  "lib": "torch",
+  "func": "hypot",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x1.fc00000000000p-127",
+  "x2": "0x1.fc00000000000p-127",
+  "y_stored": "0x0.0p+0",
+  "outputs_seen": [
+   "0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 179.60512242138307,
+  "err_independent": 179.60512242138307,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "bfloat16_bivar",
+  "lib": "torch",
+  "func": "pow",
+  "fmt": "bfloat16",
+  "check": "flushmax",
+  "x1": "0x0.0p+0",
+  "x2": "-0x1.0000000000000p-133",
+  "y_stored": "0x1.0000000000000p+0",
+  "outputs_seen": [
+   "0x1.0000000000000p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": Infinity,
+  "err_independent": Infinity,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32_search",
+  "lib": "torch",
+  "func": "atan2",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.a53c500000000p-127",
+  "x2": "0x1.a53de00000000p-45",
+  "y_stored": "-0x0.0p+0",
+  "outputs_seen": [
+   "-0x0.0p+0"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 16776972.909156455,
+  "err_independent": 16776972.909156453,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32_search",
+  "lib": "torch",
+  "func": "hypot",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "0x1.79c7a00000000p-129",
+  "x2": "-0x1.2699540000000p+64",
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": false,
+  "err_reported": 1.5474250491067253e+26,
+  "err_independent": 1.5474250491067253e+26,
+  "output_reproduced": true,
+  "ok": true
+ },
+ {
+  "kind": "binary32_search",
+  "lib": "torch",
+  "func": "pow",
+  "fmt": "binary32",
+  "check": "flushmax",
+  "x1": "-0x1.7b05e00000000p-128",
+  "x2": "-0x1.6475fe0000000p-25",
+  "y_stored": "inf",
+  "outputs_seen": [
+   "inf"
+  ],
+  "exact_is_nan": true,
+  "err_reported": Infinity,
+  "err_independent": NaN,
+  "output_reproduced": true,
+  "ok": true
+ }
+]

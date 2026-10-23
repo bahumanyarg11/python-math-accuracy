@@ -1,0 +1,47 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|cc|}
+\hline
+platform & \multicolumn{2}{c|}{CUDA (T4)} \\
+library & JAX & PyTorch \\ \hline
+exp & 0.929 & 0.929 \\
+exp2 & 726 & 0.948 \\
+expm1 & 1.18 & 1.18 \\
+log & 0.564 & 0.564 \\
+log2 & 1.35 & 1.31 \\
+log10 & 1.60 & 1.43 \\
+log1p & 1.50 & 1.50 \\
+sin & 1.52 & 1.52 \\
+cos & 1.52 & 1.52 \\
+tan & 2.09 & 2.09 \\
+asin & 1.99 & 1.99 \\
+acos & 1.53 & 1.53 \\
+atan & 1.77 & 1.77 \\
+sinh & 1.51 & 1.51 \\
+cosh & 1.40 & 1.40 \\
+tanh & 1.48 & 1.48 \\
+asinh & 2.20 & 2.20 \\
+acosh & 2.52 & 2.52 \\
+atanh & 2.50 & 2.50 \\
+cbrt & 0.501 & -- \\
+sqrt & 0.500 & 0.500 \\
+rsqrt & 0.510 & 0.510 \\
+erf & 1.50 & 1.50 \\
+erfc & 2.39e13 & 4.51 \\
+lgamma & Inf & 5.11e15 \\
+tgamma & 4.02e3 & -- \\
+j0 & Inf (4.03e177)$^{\rm n}$ & 2.42e33 \\
+j1 & Inf$^{\rm n}$ & 8.19e32 \\
+y0 & -- & 8.19e32 \\
+y1 & -- & 2.42e33 \\
+\hline
+atan2 & 1.77 & 1.77 \\
+hypot & 2.00 & 1.89 \\
+pow & 1.40 & 1.84 \\
+\hline
+\end{tabular}
+\end{small}
+\caption{GPUs: binary64, largest known error (lower bounds). Largest error in ulps (rules of Gladman et al.); in parentheses, when different, the value excluding FTZ/DAZ-affected results and NaN mismatches. Marks: f flushed by the FTZ/DAZ mode, n spurious NaN, m missing NaN; -- not provided.}
+\label{tab:b64gpu}
+\end{table}

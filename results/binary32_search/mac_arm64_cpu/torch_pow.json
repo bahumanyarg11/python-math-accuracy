@@ -1,0 +1,26 @@
+{
+ "func": "pow",
+ "lib": "torch",
+ "fmt": "binary32",
+ "device": "cpu",
+ "max_err": 0.7917111034613908,
+ "max_str": "0.792",
+ "x1": "0x1.bdb4360000000p-92",
+ "x2": "0x1.634b6a0000000p+0",
+ "y": "0x1.57fd780000000p-127",
+ "seed_err": 0.0,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9307498,
+ "seconds": 5.023965835571289,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

@@ -1,0 +1,32 @@
+{
+ "func": "pow",
+ "lib": "jax",
+ "fmt": "binary32",
+ "device": "cpu",
+ "max_err": 0.5138712632226277,
+ "max_str": "0.514",
+ "x1": "0x1.95e42c0000000p-27",
+ "x2": "0x1.3699720000000p-14",
+ "y": "0x1.ff4ef00000000p-1",
+ "seed_err": 0.5138712632226277,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 1844,
+ "flush_example": [
+  "0x1.93000a0000000p-10",
+  "0x1.affc980000000p+3"
+ ],
+ "flush_max": 8285861.084903018,
+ "denormal_mode": {
+  "daz": true,
+  "ftz": true
+ },
+ "flush_x1": "0x1.67e4cc0000000p+122",
+ "flush_x2": "-0x1.075eb00000000p+0",
+ "flush_y": "0x0.0p+0",
+ "nevals": 9277579,
+ "seconds": 3.32940411567688,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

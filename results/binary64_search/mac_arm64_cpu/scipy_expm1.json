@@ -1,0 +1,26 @@
+{
+ "func": "expm1",
+ "lib": "scipy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 4.192604298906268,
+ "max_str": "4.20",
+ "x1": "0x1.9dd43623d171fp-2",
+ "x2": null,
+ "y": "0x1.fdf34cb6bb63bp-2",
+ "seed_err": 2.669267281061375,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337527,
+ "seconds": 2.883613109588623,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

@@ -1,0 +1,68 @@
+{
+ "numpy": {
+  "float32": {
+   "daz": false,
+   "ftz": false
+  },
+  "float64": {
+   "daz": false,
+   "ftz": false
+  },
+  "binary16": {
+   "daz": false,
+   "ftz": false
+  },
+  "bfloat16": null
+ },
+ "scipy": {
+  "float32": {
+   "daz": false,
+   "ftz": false
+  },
+  "float64": {
+   "daz": false,
+   "ftz": false
+  },
+  "binary16": {
+   "daz": false,
+   "ftz": false
+  },
+  "bfloat16": null
+ },
+ "jax": {
+  "float32": {
+   "daz": true,
+   "ftz": true
+  },
+  "float64": {
+   "daz": true,
+   "ftz": true
+  },
+  "binary16": {
+   "daz": false,
+   "ftz": false
+  },
+  "bfloat16": {
+   "daz": true,
+   "ftz": true
+  }
+ },
+ "torch": {
+  "float32": {
+   "daz": false,
+   "ftz": false
+  },
+  "float64": {
+   "daz": false,
+   "ftz": false
+  },
+  "binary16": {
+   "daz": false,
+   "ftz": false
+  },
+  "bfloat16": {
+   "daz": false,
+   "ftz": false
+  }
+ }
+}

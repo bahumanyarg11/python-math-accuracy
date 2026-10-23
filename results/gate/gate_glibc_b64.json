@@ -1,0 +1,265 @@
+{
+ "lib": "glibc",
+ "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+ "machine": "x86_64",
+ "libc": [
+  "glibc",
+  "2.39"
+ ],
+ "b32": {},
+ "b64": {
+  "acosh": {
+   "x": "0x1.0001ff6afc4bap+0",
+   "y": null,
+   "z": "0x1.ffb5238940116p-8",
+   "err": 2.2412144980834743,
+   "ours": "2.25",
+   "published": "2.25",
+   "match": true
+  },
+  "asin": {
+   "x": "-0x1.0000045b2c904p-3",
+   "y": null,
+   "z": "-0x1.00abe5252746cp-3",
+   "err": 0.515402715320365,
+   "ours": "0.516",
+   "published": "0.516",
+   "match": true
+  },
+  "asinh": {
+   "x": "-0x1.02657ff36d5f3p-2",
+   "y": null,
+   "z": "-0x1.ff75bb69b0bf6p-3",
+   "err": 1.9135512366241811,
+   "ours": "1.92",
+   "published": "1.92",
+   "match": true
+  },
+  "atan": {
+   "x": "0x1.f9004c4fef9eap-4",
+   "y": null,
+   "z": "0x1.f67727f5618f2p-4",
+   "err": 0.5221682678493194,
+   "ours": "0.523",
+   "published": "0.523",
+   "match": true
+  },
+  "atanh": {
+   "x": "-0x1.ebb5133a9d9a4p-4",
+   "y": null,
+   "z": "-0x1.ee170749e7148p-4",
+   "err": 1.7790949810121124,
+   "ours": "1.78",
+   "published": "1.78",
+   "match": true
+  },
+  "cbrt": {
+   "x": "0x1.7a337e1ba1ec2p-257",
+   "y": null,
+   "z": "0x1.6f59116ea8849p-86",
+   "err": 3.667144858062777,
+   "ours": "3.67",
+   "published": "3.67",
+   "match": true
+  },
+  "cos": {
+   "x": "-0x1.7120161c92674p+0",
+   "y": null,
+   "z": "0x1.0741fb768384ap-3",
+   "err": 0.5156272748507412,
+   "ours": "0.516",
+   "published": "0.516",
+   "match": true
+  },
+  "cosh": {
+   "x": "-0x1.633c654fee2bap+9",
+   "y": null,
+   "z": "0x1.fdf25fc26e7c0p+1023",
+   "err": 1.9222140065448643,
+   "ours": "1.93",
+   "published": "1.93",
+   "match": true
+  },
+  "erf": {
+   "x": "0x1.c332bde7ca515p-5",
+   "y": null,
+   "z": "0x1.fc9bba14955e6p-5",
+   "err": 1.4229450098742755,
+   "ours": "1.43",
+   "published": "1.43",
+   "match": true
+  },
+  "erfc": {
+   "x": "0x1.3ff2d63705b29p+0",
+   "y": null,
+   "z": "0x1.3bfee6d62f95cp-4",
+   "err": 5.181706896365602,
+   "ours": "5.19",
+   "published": "5.19",
+   "match": true
+  },
+  "exp": {
+   "x": "-0x1.49f33ad2c1c58p+9",
+   "y": null,
+   "z": "0x1.f3ccc815431b6p-953",
+   "err": 0.5103584556719788,
+   "ours": "0.511",
+   "published": "0.511",
+   "match": true
+  },
+  "exp10": {
+   "x": "-0x1.57449153f316ep-7",
+   "y": null,
+   "z": "0x1.f3cc3668e5776p-1",
+   "err": 0.5125564677227438,
+   "ours": "0.513",
+   "published": "0.513",
+   "match": true
+  },
+  "exp2": {
+   "x": "-0x1.1a4ce073ea908p-5",
+   "y": null,
+   "z": "0x1.f3ea48fcf17a2p-1",
+   "err": 0.5104822046480386,
+   "ours": "0.511",
+   "published": "0.511",
+   "match": true
+  },
+  "expm1": {
+   "x": "0x1.63be411e096ep-2",
+   "y": null,
+   "z": "0x1.a95c1f32ed8d6p-2",
+   "err": 0.9106541427171914,
+   "ours": "0.911",
+   "published": "0.911",
+   "match": true
+  },
+  "j0": {
+   "x": "0x1.33d152e971b4p+1",
+   "y": null,
+   "z": "-0x1.00209921727cbp-54",
+   "err": 450179410498755.06,
+   "ours": "4.51e14",
+   "published": "4.51e14",
+   "match": true
+  },
+  "j1": {
+   "x": "-0x1.ea75575af6f09p+1",
+   "y": null,
+   "z": "0x1.023f7da7d2878p-54",
+   "err": 446169415024631.25,
+   "ours": "4.47e14",
+   "published": "4.47e14",
+   "match": true
+  },
+  "lgamma": {
+   "x": "-0x1.f613ab0969f81p+1",
+   "y": null,
+   "z": "-0x1.fac67c10ca5bep-2",
+   "err": 11.040722128869993,
+   "ours": "11.1",
+   "published": "11.1",
+   "match": true
+  },
+  "log": {
+   "x": "0x1.1211bef8f68e9p+0",
+   "y": null,
+   "z": "0x1.175caeca67f84p-4",
+   "err": 0.5190226549751511,
+   "ours": "0.520",
+   "published": "0.520",
+   "match": true
+  },
+  "log10": {
+   "x": "0x1.de02157073b31p-1",
+   "y": null,
+   "z": "-0x1.e8cfabf160ec4p-6",
+   "err": 1.6182783400498364,
+   "ours": "1.62",
+   "published": "1.62",
+   "match": true
+  },
+  "log1p": {
+   "x": "-0x1.2bf183e0344b2p-2",
+   "y": null,
+   "z": "-0x1.62ebb44459d7ap-2",
+   "err": 0.8981716806917974,
+   "ours": "0.899",
+   "published": "0.899",
+   "match": true
+  },
+  "log2": {
+   "x": "0x1.1406d79e1b574p+0",
+   "y": null,
+   "z": "0x1.bd16a11d3404ep-4",
+   "err": 0.547537143813231,
+   "ours": "0.548",
+   "published": "0.548",
+   "match": true
+  },
+  "sin": {
+   "x": "-0x1.f8b791cafcdefp+4",
+   "y": null,
+   "z": "-0x1.073ca87470dfap-3",
+   "err": 0.5156227036267109,
+   "ours": "0.516",
+   "published": "0.516",
+   "match": true
+  },
+  "sinh": {
+   "x": "-0x1.633c654fee2bap+9",
+   "y": null,
+   "z": "-0x1.fdf25fc26e7c0p+1023",
+   "err": 1.9222140065448643,
+   "ours": "1.93",
+   "published": "1.93",
+   "match": true
+  },
+  "tan": {
+   "x": "-0x1.317cd745dd37cp+9",
+   "y": null,
+   "z": "-0x1.efcf403abf99ep+3",
+   "err": 0.618366357180236,
+   "ours": "0.619",
+   "published": "0.619",
+   "match": true
+  },
+  "tanh": {
+   "x": "0x1.e0d4673daf76bp-3",
+   "y": null,
+   "z": "0x1.d82f7e90b88b5p-3",
+   "err": 2.2058608320080126,
+   "ours": "2.21",
+   "published": "2.21",
+   "match": true
+  },
+  "tgamma": {
+   "x": "-0x1.c18caecc00f7bp+2",
+   "y": null,
+   "z": "0x1.fff4fe9045ccfp-8",
+   "err": 8.671827224067103,
+   "ours": "8.68",
+   "published": "8.68",
+   "match": true
+  },
+  "y0": {
+   "x": "0x1.c982eb8d417eap-1",
+   "y": null,
+   "z": "-0x1.8000000000000p-55",
+   "err": 5920543797734652.0,
+   "ours": "5.93e15",
+   "published": "5.93e15",
+   "match": true
+  },
+  "y1": {
+   "x": "0x1.193bed4dff243p+1",
+   "y": null,
+   "z": "0x1.85c24644af15fp-55",
+   "err": 5557275141094985.0,
+   "ours": "5.56e15",
+   "published": "5.56e15",
+   "match": true
+  }
+ },
+ "all_match": true
+}

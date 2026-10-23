@@ -1,0 +1,26 @@
+{
+ "func": "acos",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cuda",
+ "max_err": 1.5231289276639426,
+ "max_str": "1.53",
+ "x1": "0x1.266637a3d2bbcp-1",
+ "x2": null,
+ "y": "0x1.ea9863753364ap-1",
+ "seed_err": 1.5231289276639426,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337523,
+ "seconds": 50.71873188018799,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

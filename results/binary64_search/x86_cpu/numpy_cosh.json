@@ -1,0 +1,26 @@
+{
+ "func": "cosh",
+ "lib": "numpy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 1.9222140065448643,
+ "max_str": "1.93",
+ "x1": "-0x1.633c654fee2bap+9",
+ "x2": null,
+ "y": "0x1.fdf25fc26e7c0p+1023",
+ "seed_err": 1.9222140065448643,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337524,
+ "seconds": 14.233089685440063,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

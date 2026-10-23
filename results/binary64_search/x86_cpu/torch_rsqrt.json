@@ -1,0 +1,29 @@
+{
+ "func": "rsqrt",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 1.4999904631768017,
+ "max_str": "1.50",
+ "x1": "0x1.0000800050000p-620",
+ "x2": null,
+ "y": "0x1.ffff7fffe0001p+309",
+ "seed_err": 1.4999904631768017,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "flush_x1": null,
+ "flush_x2": null,
+ "flush_y": null,
+ "nevals": 9337521,
+ "seconds": 7.1565704345703125,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

@@ -1,0 +1,26 @@
+{
+ "func": "pow",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cuda",
+ "max_err": 1.8376279395485546,
+ "max_str": "1.84",
+ "x1": "0x1.6b2d4fdb85ba1p-1",
+ "x2": "-0x1.f0d1d713b0262p+10",
+ "y": "0x1.8ea33904ca59cp+984",
+ "seed_err": 1.8376279395485546,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 19577435,
+ "seconds": 83.49512720108032,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

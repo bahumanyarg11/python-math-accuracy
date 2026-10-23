@@ -1,0 +1,26 @@
+{
+ "func": "log10",
+ "lib": "numpy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 1.6182783400498364,
+ "max_str": "1.62",
+ "x1": "0x1.de02157073b31p-1",
+ "x2": null,
+ "y": "-0x1.e8cfabf160ec4p-6",
+ "seed_err": 1.6182783400498364,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337520,
+ "seconds": 47.41875696182251,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

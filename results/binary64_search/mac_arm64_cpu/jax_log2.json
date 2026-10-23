@@ -1,0 +1,32 @@
+{
+ "func": "log2",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 1.3461219631144716,
+ "max_str": "1.35",
+ "x1": "0x1.6e7684bc851e6p+1016",
+ "x2": null,
+ "y": "0x1.fc423e368188fp+9",
+ "seed_err": 0.734026034980708,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 1363,
+ "flush_example": [
+  "-0x0.fa8ae991f3033p-1022",
+  null
+ ],
+ "flush_max": Infinity,
+ "denormal_mode": {
+  "daz": true,
+  "ftz": true
+ },
+ "flush_x1": "-0x0.fa8ae991f3033p-1022",
+ "flush_x2": null,
+ "flush_y": "-inf",
+ "nevals": 9337533,
+ "seconds": 4.031109094619751,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

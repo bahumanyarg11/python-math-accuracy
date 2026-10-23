@@ -1,0 +1,26 @@
+{
+ "func": "atan2",
+ "lib": "torch",
+ "fmt": "binary32",
+ "device": "cuda",
+ "max_err": 2.1276825792633667,
+ "max_str": "2.13",
+ "x1": "-0x1.0b54420000000p+95",
+ "x2": "0x1.f7fa120000000p+94",
+ "y": "-0x1.a13e7c0000000p-1",
+ "seed_err": 0.9272605228510392,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9277609,
+ "seconds": 29.912122011184692,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

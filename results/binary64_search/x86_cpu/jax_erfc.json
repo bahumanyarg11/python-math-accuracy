@@ -1,0 +1,32 @@
+{
+ "func": "erfc",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 516.7514831805237,
+ "max_str": "517",
+ "x1": "0x1.72c0415d67196p+4",
+ "x2": null,
+ "y": "0x1.fff0ec0da7cbdp-781",
+ "seed_err": 178.29377878463228,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 25722,
+ "flush_example": [
+  "0x1.a8cf81fa2a28fp+4",
+  null
+ ],
+ "flush_max": 4500103715224853.0,
+ "denormal_mode": {
+  "daz": true,
+  "ftz": true
+ },
+ "flush_x1": "0x1.a8b13f1ac946bp+4",
+ "flush_x2": null,
+ "flush_y": "0x0.0p+0",
+ "nevals": 9337525,
+ "seconds": 198.3215527534485,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

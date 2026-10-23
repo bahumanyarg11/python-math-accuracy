@@ -1,0 +1,32 @@
+{
+ "func": "atan2",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 0.7461538672418405,
+ "max_str": "0.747",
+ "x1": "-0x1.6a539153430d8p-416",
+ "x2": "0x1.d2b5b9dc716d8p-415",
+ "y": "-0x1.7b2768d477e53p-2",
+ "seed_err": 0.7461538672418405,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 16576,
+ "flush_example": [
+  "0x1.fffffffffffffp-627",
+  "0x1.0000000000000p+448"
+ ],
+ "flush_max": 9003712905644814.0,
+ "denormal_mode": {
+  "daz": true,
+  "ftz": true
+ },
+ "flush_x1": "-0x0.c8dca158f6354p-1022",
+ "flush_x2": "0x1.91e114f9cb881p-444",
+ "flush_y": "-0x0.0p+0",
+ "nevals": 19577530,
+ "seconds": 17.351837873458862,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

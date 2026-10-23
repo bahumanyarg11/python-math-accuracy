@@ -1,0 +1,26 @@
+{
+ "func": "tanh",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cuda",
+ "max_err": 1.4738848007566352,
+ "max_str": "1.48",
+ "x1": "-0x1.19398a9a24319p-1",
+ "x2": null,
+ "y": "-0x1.fff8545d2fca2p-2",
+ "seed_err": 1.4738848007566352,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337525,
+ "seconds": 13.815314531326294,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

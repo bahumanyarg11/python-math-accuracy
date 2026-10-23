@@ -1,0 +1,162 @@
+{
+ "acos": {
+  "x": "-0x1.0068b067c6feep-1",
+  "y": null,
+  "err": "0.930"
+ },
+ "acosh": {
+  "x": "0x1.0001ff6afc4bap+0",
+  "y": null,
+  "err": "2.25"
+ },
+ "asin": {
+  "x": "-0x1.004d1c5a9400bp-1",
+  "y": null,
+  "err": "0.981"
+ },
+ "asinh": {
+  "x": "-0x1.02657ff36d5f3p-2",
+  "y": null,
+  "err": "1.92"
+ },
+ "atan": {
+  "x": "0x1.62ff6a1682c25p-1",
+  "y": null,
+  "err": "0.861"
+ },
+ "atan2": {
+  "x": "-0x1.358bb5eb25bdcp+813",
+  "y": "0x1.2f86b82481a0ap+815",
+  "err": "1.55"
+ },
+ "atanh": {
+  "x": "-0x1.f97fabc0650c4p-4",
+  "y": null,
+  "err": "1.81"
+ },
+ "cbrt": {
+  "x": "-0x1.13a5ccd87c9bbp+1008",
+  "y": null,
+  "err": "0.668"
+ },
+ "cos": {
+  "x": "-0x1.34e729fd08086p+21",
+  "y": null,
+  "err": "0.834"
+ },
+ "cosh": {
+  "x": "-0x1.6310ab92794a8p+9",
+  "y": null,
+  "err": "1.47"
+ },
+ "erf": {
+  "x": "-0x1.c57541b55c8ebp-16",
+  "y": null,
+  "err": "1.02"
+ },
+ "erfc": {
+  "x": "0x1.5182d8799b84bp+0",
+  "y": null,
+  "err": "4.08"
+ },
+ "exp": {
+  "x": "0x1.2e8f20cf3cbe7p+8",
+  "y": null,
+  "err": "0.949"
+ },
+ "exp2": {
+  "x": "-0x1.ff1eb5acee46bp+9",
+  "y": null,
+  "err": "0.751"
+ },
+ "expm1": {
+  "x": "0x1.62ff47a01658fp-2",
+  "y": null,
+  "err": "0.909"
+ },
+ "hypot": {
+  "x": "0x1.6a0a41410b1abp-1004",
+  "y": "-0x0.a24afe71b539fp-1022",
+  "err": "1.21"
+ },
+ "j0": {
+  "x": "0x1.33d152e971b4p+1",
+  "y": null,
+  "err": "4.51e14"
+ },
+ "j1": {
+  "x": "-0x1.ea75575af6f09p+1",
+  "y": null,
+  "err": "1.10e15"
+ },
+ "lgamma": {
+  "x": "-0x1.3a7fc9600f86cp+1",
+  "y": null,
+  "err": "4.45e15"
+ },
+ "log": {
+  "x": "0x1.48ae5a67204f5p+0",
+  "y": null,
+  "err": "0.946"
+ },
+ "log10": {
+  "x": "0x1.553e1cb579ee9p+0",
+  "y": null,
+  "err": "0.814"
+ },
+ "log1p": {
+  "x": "-0x1.2bf1de6b04a8ap-2",
+  "y": null,
+  "err": "0.896"
+ },
+ "log2": {
+  "x": "0x1.67eaf07ce24d1p+0",
+  "y": null,
+  "err": "0.921"
+ },
+ "pow": {
+  "x": "0x1.000002c5e2e99p+0",
+  "y": "0x1.c9eee35374af6p+31",
+  "err": "636."
+ },
+ "sin": {
+  "x": "0x1.4d84db080b9fdp+21",
+  "y": null,
+  "err": "0.831"
+ },
+ "sinh": {
+  "x": "-0x1.63324af2fb5b7p-1",
+  "y": null,
+  "err": "1.88"
+ },
+ "sqrt": {
+  "x": "0x1.fffffffffffffp-1",
+  "y": null,
+  "err": "0.5(CR)"
+ },
+ "tan": {
+  "x": "0x1.3f9605aaeb51bp+21",
+  "y": null,
+  "err": "1.02"
+ },
+ "tanh": {
+  "x": "-0x1.e134557098e37p-3",
+  "y": null,
+  "err": "2.22"
+ },
+ "tgamma": {
+  "x": "-0x1.540b170c4e65ep+7",
+  "y": null,
+  "err": "1.03e3"
+ },
+ "y0": {
+  "x": "0x1.c982eb8d417eap-1",
+  "y": null,
+  "err": "1.42e15"
+ },
+ "y1": {
+  "x": "0x1.193bed4dff243p+1",
+  "y": null,
+  "err": "5.56e15"
+ }
+}

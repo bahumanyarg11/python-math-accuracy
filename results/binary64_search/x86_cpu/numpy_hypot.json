@@ -1,0 +1,26 @@
+{
+ "func": "hypot",
+ "lib": "numpy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 0.7916642946053798,
+ "max_str": "0.792",
+ "x1": "0x0.603e52daf0bfdp-1022",
+ "x2": "-0x0.a622d0a9a433bp-1022",
+ "y": "0x0.bffffb1b06482p-1022",
+ "seed_err": 0.7916642946053798,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 19577498,
+ "seconds": 13.31105923652649,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

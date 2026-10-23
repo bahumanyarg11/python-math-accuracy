@@ -1,0 +1,43 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|cc|cc|cc|c|}
+\hline
+platform & \multicolumn{2}{c|}{x86-64 CPU} & \multicolumn{2}{c|}{Arm64 CPU (M4)} & \multicolumn{2}{c|}{CUDA (T4)} & \multicolumn{1}{c|}{MPS (M4)} \\
+library & JAX & PyTorch & JAX & PyTorch & JAX & PyTorch & PyTorch \\ \hline
+exp & 109 (0.500)$^{\rm f}$ & 0.500 & 109 (0.500)$^{\rm f}$ & 0.500 & 0.501 & 0.500 & 109 (0.500)$^{\rm f}$ \\
+exp2 & 101$^{\rm f}$ & 0.500 & 101$^{\rm f}$ & 0.500 & 101 & 0.500 & 90.6 (0.500)$^{\rm f}$ \\
+expm1 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 128 (1.01)$^{\rm f}$ \\
+log & Inf (0.500)$^{\rm f}$ & 0.500 & Inf (0.500)$^{\rm f}$ & 0.500 & 0.500 & 0.500 & Inf (0.500)$^{\rm f}$ \\
+log2 & Inf (1.58)$^{\rm f}$ & 0.500 & Inf (1.58)$^{\rm f}$ & 0.500 & 1.58 & 0.500 & Inf (0.500)$^{\rm f}$ \\
+log10 & Inf (1.76)$^{\rm f}$ & 0.500 & Inf (1.76)$^{\rm f}$ & 0.500 & 1.76 & 0.500 & Inf (0.500)$^{\rm f}$ \\
+log1p & 127 (0.500)$^{\rm f}$ & 0.500 & 127 (0.500)$^{\rm f}$ & 0.500 & 0.500 & 0.500 & 127 (0.500)$^{\rm f}$ \\
+sin & 0.500 & 0.500 & 127 (0.500)$^{\rm f}$ & 0.500 & 0.500 & 0.500 & 127 (0.501)$^{\rm f}$ \\
+cos & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 \\
+tan & 0.500 & 0.500 & 128 (0.500)$^{\rm f}$ & 0.500 & 0.500 & 0.500 & 128 (0.500)$^{\rm f}$ \\
+asin & 256$^{\rm f}$ & 0.500 & 129$^{\rm f}$ & 0.500 & 0.500 & 0.500 & 128 (0.500)$^{\rm f}$ \\
+acos & 1.14 & 0.500 & 1.14 & 0.500 & 0.500 & 0.500 & 0.500 \\
+atan & 0.500 & 0.500 & 127 (0.500)$^{\rm f}$ & 0.500 & 0.500 & 0.500 & 127 (0.500)$^{\rm f}$ \\
+sinh & 128 (0.500)$^{\rm f}$ & 87.2 & 128 (0.500)$^{\rm f}$ & 87.2 & 0.500 & 0.500 & 128 (0.500)$^{\rm f}$ \\
+cosh & 0.500 & 87.2 & 0.500 & 87.2 & 0.500 & 0.500 & 0.500 \\
+tanh & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 0.500 & 127 (0.500)$^{\rm f}$ \\
+asinh & 127 (1.12)$^{\rm f}$ & 0.500 & 127 (1.12)$^{\rm f}$ & 0.500 & 0.500 & 0.500 & 127 (0.500)$^{\rm f}$ \\
+acosh & 1.60 & 0.500 & 1.60 & 0.500 & 0.500 & 0.500 & 0.500 \\
+atanh & 128 (1.09)$^{\rm f}$ & 0.500 & 128 (1.09)$^{\rm f}$ & 0.500 & 0.500 & 0.500 & 128 (0.500)$^{\rm f}$ \\
+cbrt & 130 & -- & 128 & -- & 0.500 & -- & -- \\
+sqrt & Inf (0.500)$^{\rm f}$ & 0.500 & Inf (0.500)$^{\rm f}$ & 0.500 & 0.500 & 0.500 & Inf (0.500)$^{\rm f}$ \\
+rsqrt & Inf (0.500)$^{\rm f}$ & 0.500 & Inf (0.500)$^{\rm f}$ & 1.15 & 0.500 & 0.500 & Inf (0.500)$^{\rm f}$ \\
+erf & 144 (0.500)$^{\rm f}$ & 144 & 144 (0.500)$^{\rm f}$ & 144 & 0.500 & 0.500 & 144 (0.500)$^{\rm f}$ \\
+erfc & 45.8 (0.500)$^{\rm f}$ & 0.500 & 45.8 (0.500)$^{\rm f}$ & 0.500 & 1.35 & 0.500 & 256$^{\rm f}$ \\
+lgamma & 6.81e38 (5.20e33)$^{\rm f}$ & 2.23 & 6.81e38 (5.20e33)$^{\rm f}$ & 2.23 & 0.501 & 0.500 & Inf (1.37e39)$^{\rm fn}$ \\
+tgamma & 383 (69.7)$^{\rm f}$ & -- & 383 (69.7)$^{\rm f}$ & -- & 69.7 & -- & -- \\
+j0 & Inf (1.54e54)$^{\rm n}$ & -- & Inf (1.54e54)$^{\rm n}$ & -- & Inf (1.97e56)$^{\rm n}$ & -- & 6.15e5 \\
+j1 & Inf (2.06e62)$^{\rm n}$ & -- & Inf (2.06e62)$^{\rm n}$ & -- & Inf (2.06e62)$^{\rm n}$ & -- & 1.38e6$^{\rm f}$ \\
+y0 & -- & -- & -- & -- & -- & -- & Inf (1.38e6)$^{\rm f}$ \\
+y1 & -- & -- & -- & -- & -- & -- & Inf (6.15e5)$^{\rm f}$ \\
+\hline
+\end{tabular}
+\end{small}
+\caption{bfloat16: largest error over all inputs (exhaustive). Values: largest error in ulps under the rules of Gladman et al. (3 significant digits rounded up; an input where only one of the library result and the exact result is NaN gives Inf). In parentheses, when different: the largest error excluding results affected by a flush-to-zero/denormals-are-zero mode of the backend and NaN mismatches. 0.500 = correctly rounded on all inputs; -- = function not provided for this format/backend; marks: f = some results flushed by the backend's FTZ/DAZ mode, n = spurious NaN for some inputs, m = NaN missing (number returned where the result is NaN). }
+\label{tab:bfloat16}
+\end{table}

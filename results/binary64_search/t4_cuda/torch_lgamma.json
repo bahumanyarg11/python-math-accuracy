@@ -1,0 +1,26 @@
+{
+ "func": "lgamma",
+ "lib": "torch",
+ "fmt": "binary64",
+ "device": "cuda",
+ "max_err": 5106118198555816.0,
+ "max_str": "5.11e15",
+ "x1": "-0x1.fa471547c2fe5p+1",
+ "x2": null,
+ "y": "-0x1.8000000000000p-51",
+ "seed_err": 5106118198555816.0,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337527,
+ "seconds": 333.5731751918793,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

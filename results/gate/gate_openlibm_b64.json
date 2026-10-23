@@ -1,0 +1,292 @@
+{
+ "lib": "openlibm",
+ "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+ "machine": "x86_64",
+ "libc": [
+  "glibc",
+  "2.39"
+ ],
+ "b32": {},
+ "b64": {
+  "acos": {
+   "x": "-0x1.0068b067c6feep-1",
+   "y": null,
+   "z": "0x1.0c335e2f07270p+1",
+   "err": 0.929811065997487,
+   "ours": "0.930",
+   "published": "0.930",
+   "match": true
+  },
+  "acosh": {
+   "x": "0x1.0001ff6afc4bap+0",
+   "y": null,
+   "z": "0x1.ffb5238940116p-8",
+   "err": 2.2412144980834743,
+   "ours": "2.25",
+   "published": "2.25",
+   "match": true
+  },
+  "asin": {
+   "x": "-0x1.004d1c5a9400bp-1",
+   "y": null,
+   "z": "-0x1.0c6e322e8a28cp-1",
+   "err": 0.9808225736439745,
+   "ours": "0.981",
+   "published": "0.981",
+   "match": true
+  },
+  "asinh": {
+   "x": "-0x1.02657ff36d5f3p-2",
+   "y": null,
+   "z": "-0x1.ff75bb69b0bf6p-3",
+   "err": 1.9135512366241811,
+   "ours": "1.92",
+   "published": "1.92",
+   "match": true
+  },
+  "atan": {
+   "x": "0x1.62ff6a1682c25p-1",
+   "y": null,
+   "z": "0x1.3666b15c8756ap-1",
+   "err": 0.8602452774507452,
+   "ours": "0.861",
+   "published": "0.861",
+   "match": true
+  },
+  "atan2": {
+   "x": "-0x1.358bb5eb25bdcp+813",
+   "y": "0x1.2f86b82481a0ap+815",
+   "z": "-0x1.ff4300e2bba9ep-3",
+   "err": 1.549080375519231,
+   "ours": "1.55",
+   "published": "1.55",
+   "match": true
+  },
+  "atanh": {
+   "x": "-0x1.f97fabc0650c4p-4",
+   "y": null,
+   "z": "-0x1.fc16bb2fd3672p-4",
+   "err": 1.8051171631953753,
+   "ours": "1.81",
+   "published": "1.81",
+   "match": true
+  },
+  "cbrt": {
+   "x": "-0x1.13a5ccd87c9bbp+1008",
+   "y": null,
+   "z": "-0x1.066372b24ccbcp+336",
+   "err": 0.6671494412492978,
+   "ours": "0.668",
+   "published": "0.668",
+   "match": true
+  },
+  "cos": {
+   "x": "-0x1.34e729fd08086p+21",
+   "y": null,
+   "z": "0x1.6a6a0d6a17f10p-1",
+   "err": 0.8331344857784854,
+   "ours": "0.834",
+   "published": "0.834",
+   "match": true
+  },
+  "cosh": {
+   "x": "-0x1.6310ab92794a8p+9",
+   "y": null,
+   "z": "0x1.6a61f114d5240p+1023",
+   "err": 1.4661838119109027,
+   "ours": "1.47",
+   "published": "1.47",
+   "match": true
+  },
+  "erf": {
+   "x": "-0x1.c57541b55c8ebp-16",
+   "y": null,
+   "z": "-0x1.ffac2f69a14ecp-16",
+   "err": 1.019664034211233,
+   "ours": "1.02",
+   "published": "1.02",
+   "match": true
+  },
+  "erfc": {
+   "x": "0x1.5182d8799b84bp+0",
+   "y": null,
+   "z": "0x1.fdf5fc99e72b2p-5",
+   "err": 4.076818299593189,
+   "ours": "4.08",
+   "published": "4.08",
+   "match": true
+  },
+  "exp": {
+   "x": "0x1.2e8f20cf3cbe7p+8",
+   "y": null,
+   "z": "0x1.6a2a59cc78bf8p+436",
+   "err": 0.9483301342561812,
+   "ours": "0.949",
+   "published": "0.949",
+   "match": true
+  },
+  "exp2": {
+   "x": "-0x1.ff1eb5acee46bp+9",
+   "y": null,
+   "z": "0x0.d8c767b359302p-1022",
+   "err": 0.7506943829755561,
+   "ours": "0.751",
+   "published": "0.751",
+   "match": true
+  },
+  "expm1": {
+   "x": "0x1.62ff47a01658fp-2",
+   "y": null,
+   "z": "0x1.a84deaad4b1c4p-2",
+   "err": 0.9081457555399906,
+   "ours": "0.909",
+   "published": "0.909",
+   "match": true
+  },
+  "hypot": {
+   "x": "0x1.6a0a41410b1abp-1004",
+   "y": "-0x0.a24afe71b539fp-1022",
+   "z": "0x1.6a0a41410d60ap-1004",
+   "err": 1.2070987848364028,
+   "ours": "1.21",
+   "published": "1.21",
+   "match": true
+  },
+  "j0": {
+   "x": "0x1.33d152e971b4p+1",
+   "y": null,
+   "z": "-0x1.00209921727cbp-54",
+   "err": 450179410498755.06,
+   "ours": "4.51e14",
+   "published": "4.51e14",
+   "match": true
+  },
+  "j1": {
+   "x": "-0x1.ea75575af6f09p+1",
+   "y": null,
+   "z": "0x1.bab5fbfb1fc3cp-55",
+   "err": 1095190423153233.2,
+   "ours": "1.10e15",
+   "published": "1.10e15",
+   "match": true
+  },
+  "lgamma": {
+   "x": "-0x1.3a7fc9600f86cp+1",
+   "y": null,
+   "z": "0x1.0000000000000p-53",
+   "err": 4448368812103571.5,
+   "ours": "4.45e15",
+   "published": "4.45e15",
+   "match": true
+  },
+  "log": {
+   "x": "0x1.48ae5a67204f5p+0",
+   "y": null,
+   "z": "0x1.ffd10abffc3fep-3",
+   "err": 0.9453059169672644,
+   "ours": "0.946",
+   "published": "0.946",
+   "match": true
+  },
+  "log10": {
+   "x": "0x1.553e1cb579ee9p+0",
+   "y": null,
+   "z": "0x1.ff46ba0154ef6p-4",
+   "err": 0.8132269684799159,
+   "ours": "0.814",
+   "published": "0.814",
+   "match": true
+  },
+  "log1p": {
+   "x": "-0x1.2bf1de6b04a8ap-2",
+   "y": null,
+   "z": "-0x1.62ec34511d7dep-2",
+   "err": 0.8955794897565416,
+   "ours": "0.896",
+   "published": "0.896",
+   "match": true
+  },
+  "log2": {
+   "x": "0x1.67eaf07ce24d1p+0",
+   "y": null,
+   "z": "0x1.f751e70e7999cp-2",
+   "err": 0.9208975797712482,
+   "ours": "0.921",
+   "published": "0.921",
+   "match": true
+  },
+  "pow": {
+   "x": "0x1.000002c5e2e99p+0",
+   "y": "0x1.c9eee35374af6p+31",
+   "z": "0x1.ffffe0bc9e614p+915",
+   "err": 635.3295989073873,
+   "ours": "636",
+   "published": "636.",
+   "match": true
+  },
+  "sin": {
+   "x": "0x1.4d84db080b9fdp+21",
+   "y": null,
+   "z": "0x1.6e21c4ff6aec4p-1",
+   "err": 0.8307594270522598,
+   "ours": "0.831",
+   "published": "0.831",
+   "match": true
+  },
+  "sinh": {
+   "x": "-0x1.63324af2fb5b7p-1",
+   "y": null,
+   "z": "-0x1.8061a63c65490p-1",
+   "err": 1.8740498163802852,
+   "ours": "1.88",
+   "published": "1.88",
+   "match": true
+  },
+  "tan": {
+   "x": "0x1.3f9605aaeb51bp+21",
+   "y": null,
+   "z": "-0x1.9678ee5d64936p-1",
+   "err": 1.0116590922306143,
+   "ours": "1.02",
+   "published": "1.02",
+   "match": true
+  },
+  "tanh": {
+   "x": "-0x1.e134557098e37p-3",
+   "y": null,
+   "z": "-0x1.d88a5253f1c9fp-3",
+   "err": 2.2149873954840307,
+   "ours": "2.22",
+   "published": "2.22",
+   "match": true
+  },
+  "tgamma": {
+   "x": "-0x1.540b170c4e65ep+7",
+   "y": null,
+   "z": "-0x1.fff5aa7ec3fdcp-1015",
+   "err": 1026.7433730057612,
+   "ours": "1.03e3",
+   "published": "1.03e3",
+   "match": true
+  },
+  "y0": {
+   "x": "0x1.c982eb8d417eap-1",
+   "y": null,
+   "z": "-0x1.0000000000000p-55",
+   "err": 1416944170364155.8,
+   "ours": "1.42e15",
+   "published": "1.42e15",
+   "match": true
+  },
+  "y1": {
+   "x": "0x1.193bed4dff243p+1",
+   "y": null,
+   "z": "0x1.85c24644af15fp-55",
+   "err": 5557275141094985.0,
+   "ours": "5.56e15",
+   "published": "5.56e15",
+   "match": true
+  }
+ },
+ "all_match": true
+}

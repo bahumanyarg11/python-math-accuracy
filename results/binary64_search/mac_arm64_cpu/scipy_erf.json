@@ -1,0 +1,26 @@
+{
+ "func": "erf",
+ "lib": "scipy",
+ "fmt": "binary64",
+ "device": "cpu",
+ "max_err": 2.710516036688124,
+ "max_str": "2.72",
+ "x1": "-0x1.b8bc3c1b2619bp-8",
+ "x2": null,
+ "y": "-0x1.f14f1c3cc6dc8p-8",
+ "seed_err": 1.403512848080242,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337527,
+ "seconds": 2.218975067138672,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

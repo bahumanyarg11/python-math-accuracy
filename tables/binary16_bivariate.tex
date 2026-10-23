@@ -1,0 +1,16 @@
+\begin{table}
+\centering
+\begin{small}
+\begin{tabular}{|l|ccc|ccc|cc|c|}
+\hline
+platform & \multicolumn{3}{c|}{x86-64 CPU} & \multicolumn{3}{c|}{Arm64 CPU (M4)} & \multicolumn{2}{c|}{CUDA (T4)} & \multicolumn{1}{c|}{MPS (M4)} \\
+library & NumPy & JAX & PyTorch & NumPy & JAX & PyTorch & JAX & PyTorch & PyTorch \\ \hline
+atan2 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+hypot & 0.501 & 1.95 & 0.501 & 0.501 & 1.92 & 0.501 & 1.95 & 0.501 & 0.501 \\
+pow & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 & 0.501 \\
+\hline
+\end{tabular}
+\end{small}
+\caption{binary16 bivariate: largest error over all pairs (exhaustive). Values: largest error in ulps under the rules of Gladman et al. (3 significant digits rounded up; an input where only one of the library result and the exact result is NaN gives Inf). In parentheses, when different: the largest error excluding results affected by a flush-to-zero/denormals-are-zero mode of the backend and NaN mismatches. 0.500 = correctly rounded on all inputs; -- = function not provided for this format/backend; marks: f = some results flushed by the backend's FTZ/DAZ mode, n = spurious NaN for some inputs, m = NaN missing (number returned where the result is NaN). }
+\label{tab:binary16bi}
+\end{table}

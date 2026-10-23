@@ -1,0 +1,26 @@
+{
+ "func": "log2",
+ "lib": "jax",
+ "fmt": "binary64",
+ "device": "cuda",
+ "max_err": 1.347267912964153,
+ "max_str": "1.35",
+ "x1": "0x1.12d8f4b088ae6p-510",
+ "x2": null,
+ "y": "-0x1.fde5c361bba90p+8",
+ "seed_err": 1.3008223003663935,
+ "nanmis": 0,
+ "nan_example": null,
+ "n_flush": 0,
+ "flush_example": null,
+ "flush_max": -1.0,
+ "denormal_mode": {
+  "daz": false,
+  "ftz": false
+ },
+ "nevals": 9337530,
+ "seconds": 25.75017476081848,
+ "T": 1000,
+ "nseeds": 4,
+ "nrandom": 1048576
+}

@@ -1,0 +1,4 @@
+function,NumPy x86-64 CPU,SciPy x86-64 CPU,JAX x86-64 CPU,PyTorch x86-64 CPU,NumPy Arm64 CPU (M4),SciPy Arm64 CPU (M4),JAX Arm64 CPU (M4),PyTorch Arm64 CPU (M4),JAX CUDA (T4),PyTorch CUDA (T4),PyTorch MPS (M4)
+atan2,1.52,--,Inf (3.61e6) [fn],1.52,0.722,--,1.68e7 [f],1.00,3.00,2.13,1.68e7 (3.38) [f]
+hypot,0.501,--,1.11e7 (2.00) [f],1.00,0.501,--,1.11e7 (2.00) [f],1.00,2.67,1.03,1.55e26 [f]
+pow,0.817,--,2.29e13 [f],0.817,0.514,--,8.29e6 (0.514) [f],0.792,1.10,1.10,Inf (4.01) [f]
